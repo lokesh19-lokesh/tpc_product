@@ -23,6 +23,10 @@
   display: flex;
 }
 
+.social-links {
+  margin-top: 1.5rem;
+}
+
 .footer-bottom {
   margin-top: 5rem;
   padding-top: 2rem;
@@ -33,4 +37,5 @@
   height: 64px;
   width: auto;
   display: block;
+  margin-bottom: 1.5rem;
 }
