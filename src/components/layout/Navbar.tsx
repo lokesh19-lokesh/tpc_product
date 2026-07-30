@@ -4,10 +4,9 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar-container flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="square-logo"></div>
-          <span className="font-bold text-lg tracking-tight">The Patterns Company</span>
-        </div>
+        <a href="/" className="flex items-center">
+          <img src="/logo.png" alt="The Patterns Company" className="logo-img" />
+        </a>
 
         <ul className="nav-links flex items-center gap-8 text-sm text-secondary font-medium">
           <li className="nav-item has-dropdown">

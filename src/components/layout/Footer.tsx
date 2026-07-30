@@ -8,9 +8,8 @@ export function Footer() {
         <div className="footer-top grid">
           <div className="footer-brand flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2 mb-6">
-                <div className="square-logo"></div>
-                <span className="font-bold text-lg">The Patterns Company</span>
+              <div className="flex items-center mb-6">
+                <img src="/logo.png" alt="The Patterns Company" className="logo-img" />
               </div>
               <p className="text-secondary text-sm max-w-xs mb-8">
                 Building AI products that transform industries.

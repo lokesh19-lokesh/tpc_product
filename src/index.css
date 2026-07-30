@@ -144,3 +144,9 @@ ul {
   background-color: white;
   border-radius: 2px;
 }
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
