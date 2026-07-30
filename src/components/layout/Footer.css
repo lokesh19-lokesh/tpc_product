@@ -4,8 +4,9 @@
 }
 
 .footer-top {
-  grid-template-columns: 2fr 3fr;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1.5fr 4.5fr;
+  gap: 2rem;
 }
 
 .footer-brand {
@@ -20,4 +21,16 @@
 
 .footer-column ul {
   display: flex;
+}
+
+.footer-bottom {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #f3f4f6; /* gray-100 */
+}
+
+.footer-logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
 }
