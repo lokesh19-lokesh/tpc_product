@@ -73,8 +73,10 @@
 .pl-12 { padding-left: 3rem; }
 .ml-12 { margin-left: 3rem; }
 
-.grid-cols-2 {
+.solutions-grid {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .max-w-4xl { max-width: 56rem; }

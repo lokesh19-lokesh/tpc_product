@@ -74,38 +74,38 @@ export function Navbar() {
           <li className="nav-item has-dropdown">
             <a href="#solutions" className="nav-link">Solutions</a>
             <div className="dropdown-menu mega-menu">
-              <div className="container grid grid-cols-2 gap-16 max-w-4xl mx-0">
+              <div className="container solutions-grid">
                 <div>
-                  <div className="text-xs font-semibold text-secondary uppercase tracking-widest mb-6">By Team</div>
+                  <div className="text-xs font-bold text-secondary uppercase tracking-widest mb-6">By Team</div>
                   <div className="flex flex-col gap-6">
                     <a href="#" className="solution-item">
-                      <div className="font-bold text-primary text-base">Operations</div>
-                      <div className="text-sm text-secondary mt-1">Plan, monitor and automate</div>
+                      <div className="font-bold text-primary text-base mb-0.5">Operations</div>
+                      <div className="text-sm text-secondary">Plan, monitor and automate</div>
                     </a>
                     <a href="#" className="solution-item">
-                      <div className="font-bold text-primary text-base">Sales & CRM</div>
-                      <div className="text-sm text-secondary mt-1">Pipeline on every channel</div>
+                      <div className="font-bold text-primary text-base mb-0.5">Sales & CRM</div>
+                      <div className="text-sm text-secondary">Pipeline on every channel</div>
                     </a>
                     <a href="#" className="solution-item">
-                      <div className="font-bold text-primary text-base">Finance</div>
-                      <div className="text-sm text-secondary mt-1">Forecasting and controls</div>
+                      <div className="font-bold text-primary text-base mb-0.5">Finance</div>
+                      <div className="text-sm text-secondary">Forecasting and controls</div>
                     </a>
                   </div>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-secondary uppercase tracking-widest mb-6">By Need</div>
+                  <div className="text-xs font-bold text-secondary uppercase tracking-widest mb-6">By Need</div>
                   <div className="flex flex-col gap-6">
                     <a href="#" className="solution-item">
-                      <div className="font-bold text-primary text-base">Predictive maintenance</div>
-                      <div className="text-sm text-secondary mt-1">Stop failures early</div>
+                      <div className="font-bold text-primary text-base mb-0.5">Predictive maintenance</div>
+                      <div className="text-sm text-secondary">Stop failures early</div>
                     </a>
                     <a href="#" className="solution-item">
-                      <div className="font-bold text-primary text-base">Customer intelligence</div>
-                      <div className="text-sm text-secondary mt-1">Understand every account</div>
+                      <div className="font-bold text-primary text-base mb-0.5">Customer intelligence</div>
+                      <div className="text-sm text-secondary">Understand every account</div>
                     </a>
                     <a href="#" className="solution-item">
-                      <div className="font-bold text-primary text-base">Compliance</div>
-                      <div className="text-sm text-secondary mt-1">Auditable by design</div>
+                      <div className="font-bold text-primary text-base mb-0.5">Compliance</div>
+                      <div className="text-sm text-secondary">Auditable by design</div>
                     </a>
                   </div>
                 </div>
