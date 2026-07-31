@@ -6,6 +6,7 @@ import { Industries } from './components/home/Industries';
 import { WhyChooseUs } from './components/home/WhyChooseUs';
 import { PatternsLabs } from './components/home/PatternsLabs';
 import { ProductEcosystem } from './components/home/ProductEcosystem';
+import { Marquee } from './components/home/Marquee';
 import { CTA } from './components/home/CTA';
 import { Footer } from './components/layout/Footer';
 
@@ -18,6 +19,7 @@ function App() {
         <TrustedBy />
         <OurApproach />
         <ProductEcosystem />
+        <Marquee />
         <Industries />
         <WhyChooseUs />
         <PatternsLabs />
