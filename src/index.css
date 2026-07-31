@@ -84,6 +84,8 @@ ul {
 .text-secondary { color: var(--text-secondary); }
 .text-primary { color: var(--text-primary); }
 .text-green { color: var(--accent-green); }
+.text-purple { color: var(--accent-purple); }
+.text-blue { color: var(--accent-blue); }
 
 /* Layout Utilities */
 .flex { display: flex; }
@@ -130,7 +132,21 @@ ul {
 .underline-green {
   border-bottom: 6px solid var(--accent-green);
   display: inline-block;
-  line-height: 0.8;
+}
+
+.underline-purple {
+  border-bottom: 6px solid var(--accent-purple);
+  display: inline-block;
+}
+
+.underline-blue {
+  border-bottom: 6px solid var(--accent-blue);
+  display: inline-block;
+}
+
+.underline-black {
+  border-bottom: 6px solid var(--primary);
+  display: inline-block;
 }
 
 .square-logo {
