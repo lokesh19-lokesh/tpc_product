@@ -123,25 +123,28 @@ export function Hero() {
             <div className="chart-area">
               <div className="bars">
                 {[30, 45, 50, 60, 55, 70, 75, 60, 80, 85, 95, 65, 80].map((h, i) => (
-                   <div key={i} className="bar bg-green" style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
+                   <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
                 ))}
               </div>
               <div className="progress-lines mt-4">
                 <div className="line-wrapper">
-                  <div className="line" style={{ width: '100%', position: 'relative' }}>
-                    <div className="bg-green" style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '72%', borderRadius: '3px' }}></div>
+                  <div className="line" style={{ width: '100%', position: 'relative', backgroundColor: 'transparent' }}>
+                    <div className={activeProduct.color} style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '100%', opacity: 0.15, borderRadius: '3px' }}></div>
+                    <div className={activeProduct.color} style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '72%', borderRadius: '3px' }}></div>
                     <span className="text-xs text-secondary absolute right-0" style={{ transform: 'translateY(-2px)' }}>72%</span>
                   </div>
                 </div>
                 <div className="line-wrapper">
-                  <div className="line" style={{ width: '100%', position: 'relative' }}>
-                    <div className="bg-green" style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '46%', borderRadius: '3px' }}></div>
+                  <div className="line" style={{ width: '100%', position: 'relative', backgroundColor: 'transparent' }}>
+                    <div className={activeProduct.color} style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '100%', opacity: 0.15, borderRadius: '3px' }}></div>
+                    <div className={activeProduct.color} style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '46%', borderRadius: '3px' }}></div>
                     <span className="text-xs text-secondary absolute right-0" style={{ transform: 'translateY(-2px)' }}>46%</span>
                   </div>
                 </div>
                 <div className="line-wrapper">
-                  <div className="line" style={{ width: '100%', position: 'relative' }}>
-                    <div className="bg-green" style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '88%', borderRadius: '3px' }}></div>
+                  <div className="line" style={{ width: '100%', position: 'relative', backgroundColor: 'transparent' }}>
+                    <div className={activeProduct.color} style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '100%', opacity: 0.15, borderRadius: '3px' }}></div>
+                    <div className={activeProduct.color} style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '88%', borderRadius: '3px' }}></div>
                     <span className="text-xs text-secondary absolute right-0" style={{ transform: 'translateY(-2px)' }}>88%</span>
                   </div>
                 </div>
@@ -154,12 +157,12 @@ export function Hero() {
           <div className="chat-layout">
             <div className="chat-bubbles">
               <div className="chat-bubble left">Hi — is the enterprise plan still open?</div>
-              <div className="chat-bubble right">It is. I've reserved 40 seats for you.</div>
+              <div className={`chat-bubble right ${activeProduct.color}`}>It is. I've reserved 40 seats for you.</div>
               <div className="chat-bubble left">Send the invoice on WhatsApp?</div>
-              <div className="chat-bubble right">Sent. Payment link inside the thread.</div>
+              <div className={`chat-bubble right ${activeProduct.color}`}>Sent. Payment link inside the thread.</div>
               <div className="chat-input-box">
                 <span className="text-secondary">Reply with AI...</span>
-                <div className="chat-input-circle"></div>
+                <div className={`chat-input-circle ${activeProduct.color}`}></div>
               </div>
             </div>
             <div className="yestick-sidebar">
@@ -190,7 +193,7 @@ export function Hero() {
             </div>
             <div className="bars" style={{ height: '80px', marginTop: '1rem', borderBottom: 'none' }}>
               {[20, 30, 45, 35, 25, 40, 50, 60, 45, 55, 75, 95].map((h, i) => (
-                 <div key={i} className="bar bg-green" style={{ height: `${h}%` }}></div>
+                 <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
               ))}
             </div>
             <div className="school-list">
