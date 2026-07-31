@@ -35,7 +35,7 @@
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 280px;
+  grid-auto-rows: minmax(280px, auto);
   gap: 1rem;
 }
 
@@ -134,10 +134,13 @@
 /* Grid Spans */
 .bento-item.manufacturing {
   grid-column: span 7;
+  height: 550px;
 }
 
 .bento-item.healthcare {
   grid-column: span 5;
+  height: 280px;
+  align-self: start;
 }
 
 .bento-item.hospitality {
@@ -170,6 +173,15 @@
   .bento-item.manufacturing,
   .bento-item.enterprise {
     grid-column: span 2;
+  }
+
+  .bento-item.manufacturing {
+    height: auto;
+  }
+
+  .bento-item.healthcare {
+    height: auto;
+    align-self: stretch;
   }
 
   .bento-item.healthcare,
