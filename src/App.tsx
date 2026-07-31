@@ -1,6 +1,7 @@
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/home/Hero';
 import { TrustedBy } from './components/home/TrustedBy';
+import { OurApproach } from './components/home/OurApproach';
 import { ProductEcosystem } from './components/home/ProductEcosystem';
 import { Footer } from './components/layout/Footer';
 
@@ -11,6 +12,7 @@ function App() {
       <main>
         <Hero />
         <TrustedBy />
+        <OurApproach />
         <ProductEcosystem />
       </main>
       <Footer />

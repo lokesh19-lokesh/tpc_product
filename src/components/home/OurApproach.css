@@ -1,0 +1,93 @@
+.approach-section {
+  padding: 8rem 1rem;
+  background-color: white;
+  width: 100%;
+}
+
+.approach-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.approach-header {
+  margin-bottom: 6rem;
+}
+
+.approach-overline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.approach-title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.approach-card {
+  border-top: 1px solid #111827;
+  padding-top: 2rem;
+}
+
+.approach-number {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #111827;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.approach-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 1rem 0;
+}
+
+.approach-card-text {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .approach-grid {
+    gap: 2rem;
+  }
+  .approach-title {
+    font-size: 3.5rem;
+  }
+  .approach-number {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-section {
+    padding: 5rem 1rem;
+  }
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .approach-title {
+    font-size: 2.5rem;
+  }
+}
