@@ -46,6 +46,15 @@ export function ProductEcosystem() {
       className: 'construction',
       image: '/images/construction_bg_1785483463000.png',
       colorClass: 'explore-white'
+    },
+    {
+      id: 'enterprise-solutions',
+      title: 'Enterprise Solutions',
+      category: 'CUSTOM DEPLOYMENTS',
+      description: 'Private cloud, bespoke models and dedicated engineering for organisations operating at national scale.',
+      className: 'enterprise',
+      image: '/images/enterprise_bg_1785484546004.png',
+      colorClass: 'explore-orange'
     }
   ];
 

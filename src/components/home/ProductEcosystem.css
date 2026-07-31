@@ -127,6 +127,10 @@
   color: white;
 }
 
+.explore-orange {
+  color: #f97316;
+}
+
 /* Grid Spans */
 .bento-item.manufacturing {
   grid-column: span 7;
@@ -137,14 +141,18 @@
 }
 
 .bento-item.hospitality {
-  grid-column: span 6;
+  grid-column: span 4;
 }
 
 .bento-item.education {
-  grid-column: span 6;
+  grid-column: span 4;
 }
 
 .bento-item.construction {
+  grid-column: span 4;
+}
+
+.bento-item.enterprise {
   grid-column: span 12;
 }
 
@@ -160,13 +168,14 @@
   }
 
   .bento-item.manufacturing,
-  .bento-item.construction {
+  .bento-item.enterprise {
     grid-column: span 2;
   }
 
   .bento-item.healthcare,
   .bento-item.education,
-  .bento-item.hospitality {
+  .bento-item.hospitality,
+  .bento-item.construction {
     grid-column: span 1;
   }
 }
@@ -185,7 +194,8 @@
   .bento-item.healthcare,
   .bento-item.education,
   .bento-item.hospitality,
-  .bento-item.construction {
+  .bento-item.construction,
+  .bento-item.enterprise {
     grid-column: span 1;
   }
 }
