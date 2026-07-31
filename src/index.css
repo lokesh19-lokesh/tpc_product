@@ -178,7 +178,7 @@ ul {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .text-8xl { font-size: 5rem; }
   .text-4xl { font-size: 2rem; line-height: 2.25rem; }
 }

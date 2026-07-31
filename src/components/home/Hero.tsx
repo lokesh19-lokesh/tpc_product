@@ -246,17 +246,17 @@ export function Hero() {
       <div className="container hero-grid">
         {/* Left Content */}
         <div className="hero-content">
-          <p className="overline text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-8">
+          <p className="overline text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-4 xl:mb-8">
             The Patterns Company
           </p>
-          <h1 className="hero-title text-7xl lg:text-8xl font-extrabold mb-10 tracking-tight text-primary">
+          <h1 className="hero-title text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 xl:mb-10 tracking-tight text-primary">
             Building AI<br />
             Products<br />
             That<br />
             <span className={activeProduct.underlineClass}>Transform</span><br />
             Industries.
           </h1>
-          <p className="hero-subtitle text-lg text-secondary max-w-md mb-10 leading-relaxed">
+          <p className="hero-subtitle text-lg text-secondary max-w-md mb-6 xl:mb-10 leading-relaxed">
             Six products. One intelligence layer. We build the
             software that runs manufacturing plants, hospitals,
             schools and the businesses in between.
