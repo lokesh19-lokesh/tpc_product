@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Hero.css';
 
 const products = [
@@ -86,6 +86,18 @@ const products = [
 
 export function Hero() {
   const [activeTab, setActiveTab] = useState('patterns-os');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab(current => {
+        const currentIndex = products.findIndex(p => p.id === current);
+        const nextIndex = (currentIndex + 1) % products.length;
+        return products[nextIndex].id;
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const activeProduct = products.find(p => p.id === activeTab) || products[0];
 
   const renderDashboardContent = () => {
@@ -95,28 +107,44 @@ export function Hero() {
           <>
             <div className="metrics-grid">
               <div className="metric-box">
-                <div className="text-xs text-secondary uppercase font-semibold mb-2">Throughput</div>
+                <div className="text-xs text-secondary font-semibold uppercase mb-1">Throughput</div>
                 <div className={`text-2xl font-bold ${activeProduct.textColor}`}>18,402</div>
               </div>
               <div className="metric-box">
-                <div className="text-xs text-secondary uppercase font-semibold mb-2">Uptime</div>
+                <div className="text-xs text-secondary font-semibold uppercase mb-1">Uptime</div>
                 <div className="text-2xl font-bold">99.2%</div>
               </div>
               <div className="metric-box">
-                <div className="text-xs text-secondary uppercase font-semibold mb-2">Alerts</div>
+                <div className="text-xs text-secondary font-semibold uppercase mb-1">Alerts</div>
                 <div className="text-2xl font-bold">3</div>
               </div>
             </div>
+            
             <div className="chart-area">
               <div className="bars">
                 {[30, 45, 50, 60, 55, 70, 75, 60, 80, 85, 95, 65, 80].map((h, i) => (
-                   <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
+                   <div key={i} className="bar bg-green" style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
                 ))}
               </div>
               <div className="progress-lines mt-4">
-                <div className="line-wrapper"><div className={`line ${activeProduct.color}`} style={{width: '72%'}}></div> <span className="text-xs text-secondary ml-2">72%</span></div>
-                <div className="line-wrapper"><div className={`line ${activeProduct.color}`} style={{width: '46%'}}></div> <span className="text-xs text-secondary ml-2">46%</span></div>
-                <div className="line-wrapper"><div className={`line ${activeProduct.color}`} style={{width: '88%'}}></div> <span className="text-xs text-secondary ml-2">88%</span></div>
+                <div className="line-wrapper">
+                  <div className="line" style={{ width: '100%', position: 'relative' }}>
+                    <div className="bg-green" style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '72%', borderRadius: '3px' }}></div>
+                    <span className="text-xs text-secondary absolute right-0" style={{ transform: 'translateY(-2px)' }}>72%</span>
+                  </div>
+                </div>
+                <div className="line-wrapper">
+                  <div className="line" style={{ width: '100%', position: 'relative' }}>
+                    <div className="bg-green" style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '46%', borderRadius: '3px' }}></div>
+                    <span className="text-xs text-secondary absolute right-0" style={{ transform: 'translateY(-2px)' }}>46%</span>
+                  </div>
+                </div>
+                <div className="line-wrapper">
+                  <div className="line" style={{ width: '100%', position: 'relative' }}>
+                    <div className="bg-green" style={{ position: 'absolute', left: 0, top: 0, height: '100%', width: '88%', borderRadius: '3px' }}></div>
+                    <span className="text-xs text-secondary absolute right-0" style={{ transform: 'translateY(-2px)' }}>88%</span>
+                  </div>
+                </div>
               </div>
             </div>
           </>
@@ -130,7 +158,7 @@ export function Hero() {
               <div className="chat-bubble left">Send the invoice on WhatsApp?</div>
               <div className="chat-bubble right">Sent. Payment link inside the thread.</div>
               <div className="chat-input-box">
-                <span className="text-secondary text-sm">Reply with AI...</span>
+                <span className="text-secondary">Reply with AI...</span>
                 <div className="chat-input-circle"></div>
               </div>
             </div>
@@ -152,17 +180,17 @@ export function Hero() {
         );
       case 'hero-metric':
         return (
-          <div style={{ width: '100%' }}>
+          <>
             <div className="hero-metric-container">
               <div>
-                <div className="text-xs text-secondary font-semibold uppercase tracking-wider mb-2">Applications</div>
+                <div className="text-xs text-secondary font-semibold uppercase mb-1">Applications</div>
                 <div className="text-4xl font-extrabold">12,486</div>
               </div>
               <div className="metric-badge">+34% YoY</div>
             </div>
             <div className="bars" style={{ height: '80px', marginTop: '1rem', borderBottom: 'none' }}>
               {[20, 30, 45, 35, 25, 40, 50, 60, 45, 55, 75, 95].map((h, i) => (
-                 <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%` }}></div>
+                 <div key={i} className="bar bg-green" style={{ height: `${h}%` }}></div>
               ))}
             </div>
             <div className="school-list">
@@ -182,7 +210,7 @@ export function Hero() {
                 <span className={`font-bold ${activeProduct.textColor}`}>54</span>
               </div>
             </div>
-          </div>
+          </>
         );
       case 'grid':
         return (
@@ -215,21 +243,23 @@ export function Hero() {
       <div className="container hero-grid">
         {/* Left Content */}
         <div className="hero-content">
-          <p className="overline text-sm font-semibold text-secondary uppercase tracking-wide mb-6">
+          <p className="overline text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-8">
             The Patterns Company
           </p>
-          <h1 className="hero-title text-8xl font-extrabold mb-8 tracking-tight">
+          <h1 className="hero-title text-7xl lg:text-8xl font-extrabold mb-10 tracking-tight text-primary">
             Building AI<br />
             Products<br />
             That<br />
-            Transform<br />
-            <span className={activeProduct.underlineClass}>Industries.</span>
+            <span className={activeProduct.underlineClass}>Transform</span><br />
+            Industries.
           </h1>
-          <p className="hero-subtitle text-lg text-secondary max-w-md">
-            Six products. One intelligence layer. We build the software that runs manufacturing plants, hospitals, schools and the businesses in between.
+          <p className="hero-subtitle text-lg text-secondary max-w-md mb-10 leading-relaxed">
+            Six products. One intelligence layer. We build the
+            software that runs manufacturing plants, hospitals,
+            schools and the businesses in between.
           </p>
           
-          <div className="mt-8 flex gap-4">
+          <div className="flex gap-4">
             <button className="btn-primary">Book a Demo</button>
             <button className="btn-ghost" style={{ border: '1px solid var(--border-color)' }}>Explore Products</button>
           </div>
