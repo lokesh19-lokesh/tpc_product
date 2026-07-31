@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  height: 550px;
+  min-height: 500px; /* Use min-height instead of fixed height so content can expand */
   background-color: #000;
 }
 
@@ -128,16 +128,71 @@
   color: #cbd5e1;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* Responsive - Tablets and Small Desktops (e.g. 1024x600) */
+@media (max-width: 1100px) {
+  .card-gradient-purple {
+    padding: 1.5rem;
+  }
+  .card-1-header {
+    margin-bottom: 2rem;
+  }
+  .card-1-title {
+    font-size: 2.2rem;
+  }
+  .card-1-stats {
+    gap: 0.75rem;
+  }
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+  }
+  .stat-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  .stat-value {
+    margin-bottom: 0;
+  }
+  .card-text-bottom {
+    padding: 2rem 1.5rem;
+  }
+  .card-bottom-title {
+    font-size: 1.3rem;
+  }
+  .card-bottom-subtitle {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
   .why-3col-section {
     grid-template-columns: 1fr;
-    height: auto;
   }
   .why-card {
-    min-height: 450px;
+    min-height: 400px;
   }
   .card-gradient-purple {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
+  }
+  .card-1-title {
+    font-size: 2.5rem;
+  }
+  .stat-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr;
+  }
+  .stat-label {
+    margin-bottom: 0;
+  }
+  .card-text-bottom {
+    padding: 2.5rem 2rem;
+  }
+  .card-bottom-title {
+    font-size: 1.6rem;
   }
 }
