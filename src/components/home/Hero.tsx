@@ -250,10 +250,10 @@ export function Hero() {
             The Patterns Company
           </p>
           <h1 className="hero-title text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 xl:mb-10 tracking-tight text-primary">
-            Building AI<br />
-            Products<br />
-            That<br />
-            <span className={activeProduct.underlineClass}>Transform</span><br />
+            Building AI<br className="hidden md:inline" />
+            Products<br className="hidden md:inline" />
+            That<br className="hidden md:inline" />
+            <span className={activeProduct.underlineClass}>Transform</span><br className="hidden md:inline" />
             Industries.
           </h1>
           <p className="hero-subtitle text-base text-secondary max-w-md mb-10 leading-relaxed">
@@ -262,7 +262,7 @@ export function Hero() {
             schools and the businesses in between.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <button className="btn-primary">Book a Demo</button>
             <button className="btn-ghost" style={{ border: '1px solid var(--border-color)' }}>Explore Products</button>
           </div>
@@ -313,7 +313,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="dashboard-stats flex items-center justify-between mt-12 pb-2">
+          <div className="dashboard-stats flex flex-wrap items-center justify-between mt-12 pb-2">
             {activeProduct.stats.map((stat, idx) => (
               <div key={idx}>
                 <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
