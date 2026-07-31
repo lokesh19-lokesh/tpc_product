@@ -16,6 +16,19 @@
   line-height: 1.05;
 }
 
+@media (max-width: 1024px), (max-height: 650px) {
+  .hero-title {
+    font-size: 3rem !important; /* Force smaller font on small heights */
+  }
+  .hero-subtitle {
+    font-size: 0.875rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .hero {
+    padding: 1.5rem 0 !important;
+  }
+}
+
 .hero-content {
   min-width: 0;
 }
@@ -46,6 +59,12 @@
   height: 420px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1024px), (max-height: 650px) {
+  .dashboard-card {
+    height: 340px;
+  }
 }
 
 .dashboard-card > .flex {
