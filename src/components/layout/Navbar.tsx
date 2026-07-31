@@ -1,16 +1,52 @@
+import { useState } from 'react';
 import './Navbar.css';
 
 export function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (name: string, e: React.MouseEvent) => {
+    if (window.innerWidth <= 1024) {
+      e.preventDefault();
+      setOpenDropdown(openDropdown === name ? null : name);
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="container navbar-container flex items-center justify-between">
-        <a href="/" className="flex items-center">
+        <a href="/" className="flex items-center z-10">
           <img src="/logo.png" alt="The Patterns Company" className="logo-img" />
         </a>
 
+        <button 
+          className="mobile-menu-btn z-10"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {isMobileMenuOpen ? (
+              <>
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </>
+            ) : (
+              <>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </>
+            )}
+          </svg>
+        </button>
+
+        <div className={`nav-menu-wrapper ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="nav-links flex items-center gap-8 text-sm text-secondary font-medium">
-          <li className="nav-item has-dropdown">
-            <a href="#products" className="nav-link">Products</a>
+          <li className={`nav-item has-dropdown ${openDropdown === 'products' ? 'open' : ''}`}>
+            <a href="#products" className="nav-link flex justify-between items-center" onClick={(e) => toggleDropdown('products', e)}>
+              Products
+              <svg className="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
             <div className="dropdown-menu mega-menu">
               <div className="container flex">
                 <div className="products-grid">
@@ -70,8 +106,11 @@ export function Navbar() {
             </div>
           </li>
           
-          <li className="nav-item has-dropdown">
-            <a href="#solutions" className="nav-link">Solutions</a>
+          <li className={`nav-item has-dropdown ${openDropdown === 'solutions' ? 'open' : ''}`}>
+            <a href="#solutions" className="nav-link flex justify-between items-center" onClick={(e) => toggleDropdown('solutions', e)}>
+              Solutions
+              <svg className="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
             <div className="dropdown-menu mega-menu">
               <div className="container solutions-grid">
                 <div>
@@ -122,8 +161,11 @@ export function Navbar() {
             <a href="#resources" className="nav-link">Resources</a>
           </li>
           
-          <li className="nav-item has-dropdown">
-            <a href="#company" className="nav-link">Company</a>
+          <li className={`nav-item has-dropdown ${openDropdown === 'company' ? 'open' : ''}`}>
+            <a href="#company" className="nav-link flex justify-between items-center" onClick={(e) => toggleDropdown('company', e)}>
+              Company
+              <svg className="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
             <div className="dropdown-menu mega-menu">
               <div className="container max-w-4xl mx-0">
                 <div className="text-xs font-semibold text-secondary uppercase tracking-widest mb-6">The Patterns Company</div>
@@ -146,9 +188,10 @@ export function Navbar() {
           </li>
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="nav-actions flex items-center gap-2">
           <button className="btn-ghost text-sm">Sign in</button>
           <button className="btn-primary text-sm">Book Demo</button>
+        </div>
         </div>
       </div>
     </nav>

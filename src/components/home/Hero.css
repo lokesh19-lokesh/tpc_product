@@ -191,3 +191,45 @@
 .tab-indicator.active {
   background-color: var(--accent-green);
 }
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+  }
+  .card-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .card-sidebar ul {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+  .card-sidebar ul li {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .tabs {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

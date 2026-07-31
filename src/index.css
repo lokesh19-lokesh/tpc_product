@@ -20,6 +20,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
@@ -149,4 +154,24 @@ ul {
   height: 36px;
   width: auto;
   display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .text-8xl { font-size: 5rem; }
+  .text-4xl { font-size: 2rem; line-height: 2.25rem; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 1.5rem; }
+  .text-8xl { font-size: 3.5rem; }
+  .text-3xl { font-size: 1.5rem; line-height: 2rem; }
+  .text-4xl { font-size: 1.75rem; line-height: 2rem; }
+  .gap-12 { gap: 2rem; }
+  .gap-8 { gap: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .text-8xl { font-size: 2.75rem; }
+  .container { padding: 0 1rem; }
 }

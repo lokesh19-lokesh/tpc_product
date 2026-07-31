@@ -93,3 +93,117 @@
 .product-item:hover .font-bold {
   color: var(--accent-green);
 }
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.dropdown-chevron {
+  display: none;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .dropdown-chevron {
+    display: block;
+  }
+  
+  .nav-item.open .dropdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .nav-menu-wrapper {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 73px);
+    background-color: var(--bg-color);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    overflow-y: auto;
+    display: none;
+  }
+  
+  .nav-menu-wrapper.open {
+    display: flex;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    padding: 1rem 0;
+    border-bottom: none;
+    display: none;
+  }
+
+  .nav-item.has-dropdown:hover .dropdown-menu {
+    display: none; /* override hover on mobile */
+  }
+
+  .nav-item.has-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .products-grid, .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dropdown-menu .container {
+    padding: 0;
+  }
+  
+  .dropdown-menu .container.flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .featured-section {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .nav-actions button {
+    width: 100%;
+  }
+}
