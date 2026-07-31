@@ -229,12 +229,22 @@
     grid-template-columns: 1fr;
   }
   .dashboard-stats {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  .tabs {
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
+  }
+  .dashboard-stats .text-3xl {
+    font-size: 1.25rem;
+  }
+  .hero-dashboard .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    overflow: visible;
+  }
+  .tab-item {
+    width: 100%;
+    text-align: left;
   }
 }
