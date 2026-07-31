@@ -58,5 +58,6 @@
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
+    margin-top: 2.5rem;
   }
 }

@@ -107,7 +107,7 @@ export function Footer() {
           <p className="text-sm text-secondary">
             © 2026 The Patterns Company. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-secondary">
+          <div className="flex flex-wrap gap-4 text-sm text-secondary">
             <a href="#" className="hover:text-primary transition-colors">Privacy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms</a>
             <a href="#" className="hover:text-primary transition-colors">Cookies</a>
