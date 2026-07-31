@@ -9,18 +9,63 @@ export function WhyChooseUs() {
 
       {/* Card 2: Locations Grid */}
       <div className="why-card locations-grid">
+        
+        {/* India */}
         <div className="location-box">
           <h3 className="location-name">India</h3>
+          <div className="location-details">
+            <h4 className="details-title">India</h4>
+            <div className="details-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="details-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <p>T-Hub 2.0, Inorbit Mall Rd, Vittal Rao Nagar, Knowledge City, Madhapur, Hyderabad, Telangana 500081</p>
+            </div>
+            <div className="details-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="details-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <p>C9XP+MMW, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081</p>
+            </div>
+            <div className="details-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="details-icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <p>ground floor, Prestige Atlanta, 80 Feet Rd, Koramangala 1A Block, Koramangala 3 Block, Koramangala, Bengaluru, Karnataka 560034</p>
+            </div>
+          </div>
         </div>
+        
+        {/* Dubai */}
         <div className="location-box">
           <h3 className="location-name">Dubai</h3>
+          <div className="location-details">
+            <h4 className="details-title">Dubai</h4>
+            <div className="details-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="details-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <p className="font-bold">Coming Soon</p>
+            </div>
+          </div>
         </div>
+        
+        {/* Europe */}
         <div className="location-box">
           <h3 className="location-name">Europe</h3>
+          <div className="location-details">
+            <h4 className="details-title">Europe</h4>
+            <div className="details-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="details-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <p className="font-bold">Coming Soon</p>
+            </div>
+          </div>
         </div>
+        
+        {/* America */}
         <div className="location-box">
           <h3 className="location-name">America</h3>
+          <div className="location-details">
+            <h4 className="details-title">America</h4>
+            <div className="details-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="details-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <p className="font-bold">Coming Soon</p>
+            </div>
+          </div>
         </div>
+        
       </div>
 
       {/* Card 3: Google Maps */}

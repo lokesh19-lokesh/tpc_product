@@ -85,35 +85,89 @@
 }
 
 /* Photo Cards */
+.why-card.locations-grid {
+  overflow: visible;
+}
+
 .locations-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15); /* Subtle white lines for grid */
   padding: 0;
 }
 
 .location-box {
-  background-color: #7fd15a;
+  background-color: #000000; /* Black background */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   transition: background-color 0.2s ease;
+  position: relative;
+  cursor: default;
 }
 
 .location-box:hover {
-  background-color: #6bc245;
+  background-color: #1a1a1a; /* Dark gray on hover */
 }
 
 .location-name {
-  color: white;
+  color: #ffffff; /* White text */
   font-size: 1.85rem;
   font-weight: 800;
   margin: 0;
   text-align: center;
+}
+
+.location-details {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  min-height: calc(100% + 4px);
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(10px);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.location-box:hover .location-details {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.details-title {
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+}
+
+.details-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  color: #111827;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.details-icon {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 /* Photo Cards */
