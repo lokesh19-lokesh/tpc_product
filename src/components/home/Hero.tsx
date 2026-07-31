@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import './Hero.css';
 
 const products = [
-  { 
-    id: 'patterns-os', 
-    name: 'PatternsOS', 
+  {
+    id: 'patterns-os',
+    name: 'PatternsOS',
     category: 'Manufacturing Intelligence',
     subtitle: 'The operating system for the factory floor.',
     color: 'bg-green',
@@ -18,9 +18,9 @@ const products = [
       { label: 'Plants Live', value: '214' }
     ]
   },
-  { 
-    id: 'mint-leaf-ai', 
-    name: 'MintLeafAI', 
+  {
+    id: 'mint-leaf-ai',
+    name: 'MintLeafAI',
     category: 'Healthcare Intelligence',
     subtitle: 'Clinical operations, quietly automated.',
     color: 'bg-purple',
@@ -34,9 +34,9 @@ const products = [
       { label: 'Care Sites', value: '1,180' }
     ]
   },
-  { 
-    id: 'yestick', 
-    name: 'YesTick', 
+  {
+    id: 'yestick',
+    name: 'YesTick',
     category: 'Conversational CRM',
     subtitle: 'Every customer conversation, closed.',
     color: 'bg-green',
@@ -50,9 +50,9 @@ const products = [
       { label: 'Messages/Mo', value: '96M' }
     ]
   },
-  { 
-    id: 'pick-my-school', 
-    name: 'PickMySchoolAI', 
+  {
+    id: 'pick-my-school',
+    name: 'PickMySchoolAI',
     category: 'Education Intelligence',
     subtitle: 'Admissions and outcomes on one rail.',
     color: 'bg-blue',
@@ -66,9 +66,9 @@ const products = [
       { label: 'Institutions', value: '620' }
     ]
   },
-  { 
-    id: 'patterns-labs', 
-    name: 'Patterns Labs', 
+  {
+    id: 'patterns-labs',
+    name: 'Patterns Labs',
     category: 'Applied AI Research',
     subtitle: 'Inventing the next decade of industrial AI.',
     color: 'bg-black',
@@ -101,7 +101,7 @@ export function Hero() {
   const activeProduct = products.find(p => p.id === activeTab) || products[0];
 
   const renderDashboardContent = () => {
-    switch(activeProduct.layoutType) {
+    switch (activeProduct.layoutType) {
       case 'bars':
         return (
           <>
@@ -119,11 +119,11 @@ export function Hero() {
                 <div className="text-2xl font-bold">3</div>
               </div>
             </div>
-            
+
             <div className="chart-area">
               <div className="bars">
                 {[30, 45, 50, 60, 55, 70, 75, 60, 80, 85, 95, 65, 80].map((h, i) => (
-                   <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
+                  <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
                 ))}
               </div>
               <div className="progress-lines mt-4">
@@ -193,7 +193,7 @@ export function Hero() {
             </div>
             <div className="bars" style={{ height: '80px', marginTop: '1rem', borderBottom: 'none' }}>
               {[20, 30, 45, 35, 25, 40, 50, 60, 45, 55, 75, 95].map((h, i) => (
-                 <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
+                <div key={i} className={`bar ${activeProduct.color}`} style={{ height: `${h}%`, opacity: 0.2 + (i / 12) * 0.8 }}></div>
               ))}
             </div>
             <div className="school-list">
@@ -221,7 +221,7 @@ export function Hero() {
             <div className="text-xs text-secondary font-semibold uppercase tracking-widest mb-4">Research Runs · Reasoning-V4</div>
             <div className="labs-grid-container">
               <div className="labs-grid">
-                {Array.from({length: 40}).map((_, i) => (
+                {Array.from({ length: 40 }).map((_, i) => (
                   <div key={i} className="labs-square" style={{ opacity: Math.random() * 0.8 + 0.1 }}></div>
                 ))}
               </div>
@@ -256,12 +256,12 @@ export function Hero() {
             <span className={activeProduct.underlineClass}>Transform</span><br />
             Industries.
           </h1>
-          <p className="hero-subtitle text-base text-secondary max-w-md mb-6 xl:mb-10 leading-relaxed">
+          <p className="hero-subtitle text-base text-secondary max-w-md mb-10 leading-relaxed">
             Six products. One intelligence layer. We build the
             software that runs manufacturing plants, hospitals,
             schools and the businesses in between.
           </p>
-          
+
           <div className="flex gap-4">
             <button className="btn-primary">Book a Demo</button>
             <button className="btn-ghost" style={{ border: '1px solid var(--border-color)' }}>Explore Products</button>
@@ -276,7 +276,7 @@ export function Hero() {
               {activeProduct.category}
             </span>
           </div>
-          
+
           <h2 className="text-4xl font-extrabold mb-2">{activeProduct.name}</h2>
           <p className="text-secondary mb-8">{activeProduct.subtitle}</p>
 
@@ -305,7 +305,7 @@ export function Hero() {
                   <li><span className="dot gray"></span> Settings</li>
                 </ul>
               </div>
-              
+
               {/* Main Area */}
               <div className="card-main" style={{ width: '100%', minWidth: 0, overflow: 'hidden' }}>
                 {renderDashboardContent()}
@@ -324,7 +324,7 @@ export function Hero() {
 
           <div className="tabs mt-8">
             {products.map(p => (
-              <button 
+              <button
                 key={p.id}
                 className={`tab-item ${activeTab === p.id ? 'active' : ''}`}
                 onClick={() => setActiveTab(p.id)}
