@@ -1,0 +1,104 @@
+.labs-section {
+  background-color: #111111; /* Very dark gray, almost black */
+  padding: 6rem 2rem;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.labs-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.labs-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.labs-dot {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.labs-badge-text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+}
+
+.labs-title {
+  font-size: 9rem;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0 0 5rem 0;
+}
+
+.labs-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 0 3rem 0;
+}
+
+.labs-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.labs-desc {
+  font-size: 1.1rem;
+  color: #a3a3a3;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.labs-link {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease;
+  padding-bottom: 0.25rem;
+}
+
+.labs-link:hover {
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .labs-title {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .labs-section {
+    padding: 6rem 1.5rem;
+  }
+  .labs-title {
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+  }
+  .labs-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .labs-desc br {
+    display: none;
+  }
+}

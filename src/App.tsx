@@ -4,6 +4,7 @@ import { TrustedBy } from './components/home/TrustedBy';
 import { OurApproach } from './components/home/OurApproach';
 import { Industries } from './components/home/Industries';
 import { WhyChooseUs } from './components/home/WhyChooseUs';
+import { PatternsLabs } from './components/home/PatternsLabs';
 import { ProductEcosystem } from './components/home/ProductEcosystem';
 import { Footer } from './components/layout/Footer';
 
@@ -18,6 +19,7 @@ function App() {
         <ProductEcosystem />
         <Industries />
         <WhyChooseUs />
+        <PatternsLabs />
       </main>
       <Footer />
     </div>
