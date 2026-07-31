@@ -29,17 +29,18 @@
 }
 
 .marquee-text {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: #111827;
-  padding: 0 1.5rem;
-  letter-spacing: -0.02em;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  padding: 0 2.5rem;
+  letter-spacing: -0.03em;
 }
 
 .marquee-star {
-  color: #d1d5db;
-  font-size: 1.75rem;
-  user-select: none;
+  flex-shrink: 0;
+  margin: 0 0.5rem;
+  width: 48px;
+  height: 48px;
 }
 
 @keyframes marquee {
@@ -56,10 +57,11 @@
     padding: 1.5rem 0;
   }
   .marquee-text {
-    font-size: 1.5rem;
-    padding: 0 1rem;
+    font-size: 2rem;
+    padding: 0 1.5rem;
   }
   .marquee-star {
-    font-size: 1.25rem;
+    width: 32px;
+    height: 32px;
   }
 }
