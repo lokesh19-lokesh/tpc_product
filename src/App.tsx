@@ -7,6 +7,7 @@ import { WhyChooseUs } from './components/home/WhyChooseUs';
 import { PatternsLabs } from './components/home/PatternsLabs';
 import { ProductEcosystem } from './components/home/ProductEcosystem';
 import { Marquee } from './components/home/Marquee';
+import { OurBlogs } from './components/home/OurBlogs';
 import { CTA } from './components/home/CTA';
 import { Footer } from './components/layout/Footer';
 
@@ -23,6 +24,7 @@ function App() {
         <Industries />
         <WhyChooseUs />
         <PatternsLabs />
+        <OurBlogs />
         <CTA />
       </main>
       <Footer />
