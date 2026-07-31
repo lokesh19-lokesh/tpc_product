@@ -8,6 +8,7 @@ import { PatternsLabs } from './components/home/PatternsLabs';
 import { ProductEcosystem } from './components/home/ProductEcosystem';
 import { Marquee } from './components/home/Marquee';
 import { OurBlogs } from './components/home/OurBlogs';
+import { CareersBanner } from './components/home/CareersBanner';
 import { CTA } from './components/home/CTA';
 import { Footer } from './components/layout/Footer';
 
@@ -24,6 +25,7 @@ function App() {
         <Industries />
         <WhyChooseUs />
         <PatternsLabs />
+        <CareersBanner />
         <OurBlogs />
         <CTA />
       </main>

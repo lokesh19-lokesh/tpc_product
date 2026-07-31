@@ -1,0 +1,104 @@
+/* src/components/home/CareersBanner.css */
+.careers-section {
+  background-color: #ffffff;
+  padding: 4rem 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.careers-box {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #111111 0%, #0a0a0a 100%);
+  border: 1px solid #27272a; /* dark gray */
+  border-radius: 12px;
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease;
+}
+
+.careers-box:hover {
+  border-color: #52525b; /* slightly lighter gray on hover */
+}
+
+.careers-content {
+  flex: 1;
+}
+
+.careers-overline {
+  color: #a1a1aa;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.careers-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.careers-title .highlight {
+  color: #7fd15a; /* Matching the green accent used in the site */
+}
+
+.careers-description {
+  color: #a1a1aa;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0;
+}
+
+.careers-action {
+  flex-shrink: 0;
+}
+
+.careers-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 9999px; /* pill shape */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.careers-btn .arrow {
+  transition: transform 0.3s ease;
+}
+
+.careers-btn:hover {
+  background-color: #e5e5e5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.careers-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .careers-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  
+  .careers-description {
+    margin: 0 auto;
+  }
+}

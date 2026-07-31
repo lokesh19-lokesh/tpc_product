@@ -9,7 +9,7 @@ export function Footer() {
           <div className="footer-brand flex-col">
             <div>
               <div className="flex items-center mb-6">
-                <img src="/logo.png" alt="The Patterns Company" className="footer-logo-img" />
+                <img src="/footerlogo.png" alt="The Patterns Company" className="footer-logo-img" />
               </div>
               <p className="text-secondary text-sm max-w-xs mb-8">
                 Building AI products that transform industries.
