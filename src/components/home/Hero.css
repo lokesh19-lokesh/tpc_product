@@ -1,8 +1,8 @@
 .hero {
-  padding: clamp(2rem, 5vh, 6rem) 0;
+  padding: clamp(3rem, 5vh, 4rem) 0;
   min-height: calc(100vh - 73px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-grid {
