@@ -88,11 +88,22 @@ export function Hero() {
   const [activeTab, setActiveTab] = useState('patterns-os');
 
   useEffect(() => {
+    // Set initial global color
+    document.documentElement.style.setProperty(
+      '--active-product-color', 
+      products.find(p => p.id === 'patterns-os')?.colorVar || 'var(--primary)'
+    );
+    
     const interval = setInterval(() => {
       setActiveTab(current => {
         const currentIndex = products.findIndex(p => p.id === current);
         const nextIndex = (currentIndex + 1) % products.length;
-        return products[nextIndex].id;
+        const nextProduct = products[nextIndex];
+        
+        // Update global color so other components like Navbar can sync
+        document.documentElement.style.setProperty('--active-product-color', nextProduct.colorVar);
+        
+        return nextProduct.id;
       });
     }, 3000);
     return () => clearInterval(interval);
