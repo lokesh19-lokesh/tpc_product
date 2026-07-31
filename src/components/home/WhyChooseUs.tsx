@@ -3,56 +3,37 @@ import './WhyChooseUs.css';
 export function WhyChooseUs() {
   return (
     <section className="why-3col-section">
-      {/* Card 1: Stats/Dashboard */}
-      <div className="why-card card-gradient-purple">
-        <div className="card-1-content">
-          <div className="card-1-header">
-            <h2 className="card-1-title">REAL<br/>DASHBOARDS</h2>
-          </div>
-          <div className="card-1-stats">
-            <div className="stat-row">
-              <span className="stat-label">Analytics</span>
-              <span className="stat-value">Actionable</span>
-              <span className="stat-change text-green">▲ 100%</span>
-            </div>
-            <div className="stat-row">
-              <span className="stat-label">Decisions</span>
-              <span className="stat-value">In seconds</span>
-              <span className="stat-change text-green">▲ 10x</span>
-            </div>
-            <div className="stat-row">
-              <span className="stat-label">Spreadsheets</span>
-              <span className="stat-value">Replaced</span>
-              <span className="stat-change text-red">▼ 95%</span>
-            </div>
-            <div className="stat-row">
-              <span className="stat-label">Visual Language</span>
-              <span className="stat-value">Unified</span>
-              <span className="stat-change text-green">▲ 100%</span>
-            </div>
-          </div>
+      {/* Card 1: T-Hub Picture */}
+      <div className="why-card card-photo" style={{ backgroundImage: `url('/t-hub.png')` }}>
+      </div>
+
+      {/* Card 2: Locations Grid */}
+      <div className="why-card locations-grid">
+        <div className="location-box">
+          <h3 className="location-name">India</h3>
+        </div>
+        <div className="location-box">
+          <h3 className="location-name">Dubai</h3>
+        </div>
+        <div className="location-box">
+          <h3 className="location-name">Europe</h3>
+        </div>
+        <div className="location-box">
+          <h3 className="location-name">America</h3>
         </div>
       </div>
 
-      {/* Card 2: Mobile First (Photo Background) */}
-      <div className="why-card card-photo" style={{ backgroundImage: `url('/images/feat_mobile_1785494768641.png')` }}>
-        <div className="card-overlay-gradient"></div>
-        <div className="card-text-bottom">
-          <h3 className="card-bottom-title">
-            The floor, the ward, the field — in your pocket. Designed for gloves, sunlight and one hand.
-          </h3>
-        </div>
-      </div>
-
-      {/* Card 3: Customer Story (Abstract/Photo Background) */}
-      <div className="why-card card-photo" style={{ backgroundImage: `url('/images/feat_customer_1785494779955.png')` }}>
-        <div className="card-overlay-dark"></div>
-        <div className="card-text-bottom">
-          <h3 className="card-bottom-title">
-            "PatternsOS gave us a single source of truth across nine plants. Downtime is down, morale is up."<br/>
-            <span className="card-bottom-subtitle">— Nordwerk Industries</span>
-          </h3>
-        </div>
+      {/* Card 3: Google Maps */}
+      <div className="why-card">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.2694155501504!2d78.3765600444275!3d17.433905700000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93bd18410b0f%3A0x8d7e3fea891858ce!2sT-Hub!5e0!3m2!1sen!2sin!4v1785502841260!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style={{ border: 0 }} 
+          allowFullScreen 
+          loading="lazy" 
+          referrerPolicy="strict-origin-when-cross-origin"
+        ></iframe>
       </div>
     </section>
   );
