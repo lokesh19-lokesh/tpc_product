@@ -24,9 +24,10 @@ function App() {
         <Marquee />
         <Industries />
         <WhyChooseUs />
+        <OurBlogs />
         <PatternsLabs />
         <CareersBanner />
-        <OurBlogs />
+
         <CTA />
       </main>
       <Footer />
