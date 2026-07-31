@@ -1,0 +1,177 @@
+.ecosystem-section {
+  padding: 6rem 1rem;
+  background-color: white;
+  width: 100%;
+}
+
+.ecosystem-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.ecosystem-header {
+  margin-bottom: 4rem;
+}
+
+.ecosystem-overline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.ecosystem-title {
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 280px;
+  gap: 1rem;
+}
+
+.bento-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.bento-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
+.bento-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bento-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-category {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.bento-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem 0;
+}
+
+.bento-description {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 90%;
+}
+
+.bento-explore span {
+  transition: transform 0.2s ease;
+}
+
+.bento-item:hover .explore-btn span {
+  transform: translateX(4px);
+}
+
+/* Colors for explore button */
+.text-green { color: var(--accent-green, #22c55e); }
+.text-purple { color: var(--accent-purple, #8b5cf6); }
+.text-blue { color: var(--accent-blue, #3b82f6); }
+.text-primary { color: white; }
+
+/* Grid Spans */
+.bento-item.manufacturing {
+  grid-column: span 7;
+}
+
+.bento-item.healthcare {
+  grid-column: span 5;
+}
+
+.bento-item.hospitality {
+  grid-column: span 6;
+}
+
+.bento-item.education {
+  grid-column: span 6;
+}
+
+.bento-item.construction {
+  grid-column: span 12;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ecosystem-title {
+    font-size: 3.5rem;
+  }
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+  
+  .bento-item.manufacturing,
+  .bento-item.construction {
+    grid-column: span 2;
+  }
+  
+  .bento-item.healthcare,
+  .bento-item.education,
+  .bento-item.hospitality {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystem-title {
+    font-size: 2.5rem;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+  .bento-item.manufacturing,
+  .bento-item.healthcare,
+  .bento-item.education,
+  .bento-item.hospitality,
+  .bento-item.construction {
+    grid-column: span 1;
+  }
+}

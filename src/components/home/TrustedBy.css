@@ -1,0 +1,129 @@
+.trusted-section {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.trusted-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.trusted-label-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 10;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.trusted-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.trusted-marquee {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Mask to fade edges if desired, but we have the white block on the left */
+.trusted-marquee::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to right, white, transparent);
+  z-index: 2;
+}
+
+.trusted-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to left, white, transparent);
+  z-index: 2;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  animation: scroll 30s linear infinite;
+  padding-left: 2rem;
+}
+
+.company-logo {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .trusted-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trusted-section {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+  
+  .trusted-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .trusted-label-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .trusted-marquee::before,
+  .trusted-marquee::after {
+    display: none;
+  }
+  
+  .marquee-content {
+    padding-left: 0;
+    width: 100%;
+  }
+}
