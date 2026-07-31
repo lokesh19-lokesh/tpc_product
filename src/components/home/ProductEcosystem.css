@@ -157,6 +157,7 @@
 
 .bento-item.enterprise {
   grid-column: span 12;
+  margin-top: 2rem;
 }
 
 /* Responsive */
