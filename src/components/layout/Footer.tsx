@@ -102,20 +102,23 @@ export function Footer() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="footer-bottom flex items-center justify-between">
-          <p className="text-sm text-secondary">
-            © 2026 The Patterns Company. All rights reserved.
-          </p>
-          <div className="flex flex-wrap gap-4 text-sm text-secondary">
-            <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookies</a>
-            <a href="#" className="hover:text-primary transition-colors">Trust Center</a>
-            <a href="#" className="hover:text-primary transition-colors">Accessibility</a>
+      <div className="footer-bottom-wrapper">
+        <div className="container footer-container">
+          <div className="footer-bottom flex items-center justify-between">
+            <p className="text-sm text-white">
+              © 2026 The Patterns Company. All rights reserved.
+            </p>
+            <div className="flex flex-wrap gap-4 text-sm text-white">
+              <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Cookies</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Trust Center</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Accessibility</a>
+            </div>
           </div>
         </div>
-
       </div>
     </footer>
   );
