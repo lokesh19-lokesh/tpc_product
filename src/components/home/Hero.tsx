@@ -316,13 +316,13 @@ export function Hero() {
           <div className="dashboard-stats flex flex-wrap items-center justify-between mt-12 pb-2">
             {activeProduct.stats.map((stat, idx) => (
               <div key={idx}>
-                <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
+                <div className="text-3xl font-extrabold mb-4">{stat.value}</div>
                 <div className="text-xs font-semibold text-secondary uppercase tracking-widest">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          <div className="tabs mt-8">
+          <div className="tabs mt-16">
             {products.map(p => (
               <button
                 key={p.id}
