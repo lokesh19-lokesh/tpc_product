@@ -16,9 +16,14 @@
   line-height: 0.95;
 }
 
+.hero-content {
+  min-width: 0;
+}
+
 .hero-dashboard {
   background: transparent;
   width: 100%;
+  min-width: 0;
 }
 
 .status-dot {

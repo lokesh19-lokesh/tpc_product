@@ -11,6 +11,14 @@
   /* position: relative; removed so dropdown can span full width */
 }
 
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 4rem;
+}
+
 .nav-link {
   color: var(--text-secondary);
   transition: color var(--transition-fast);
