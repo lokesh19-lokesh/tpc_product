@@ -249,14 +249,14 @@ export function Hero() {
           <p className="overline text-xs font-bold text-secondary uppercase tracking-[0.2em] mb-4 xl:mb-8">
             The Patterns Company
           </p>
-          <h1 className="hero-title text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 xl:mb-10 tracking-tight text-primary">
+          <h1 className="hero-title text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 xl:mb-10 tracking-tight text-primary">
             Building AI<br />
             Products<br />
             That<br />
             <span className={activeProduct.underlineClass}>Transform</span><br />
             Industries.
           </h1>
-          <p className="hero-subtitle text-lg text-secondary max-w-md mb-6 xl:mb-10 leading-relaxed">
+          <p className="hero-subtitle text-base text-secondary max-w-md mb-6 xl:mb-10 leading-relaxed">
             Six products. One intelligence layer. We build the
             software that runs manufacturing plants, hospitals,
             schools and the businesses in between.
