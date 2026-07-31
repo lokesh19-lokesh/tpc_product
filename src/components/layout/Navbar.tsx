@@ -51,7 +51,7 @@ export function Navbar() {
               <div className="container flex">
                 <div className="products-grid">
                   <a href="#" className="product-item">
-                    <div className="square-icon-medium bg-green"></div>
+                    <div className="square-icon-medium bg-orange"></div>
                     <div>
                       <div className="font-bold text-primary text-base">PatternsOS</div>
                       <div className="text-sm text-secondary mt-1">Manufacturing Intelligence</div>
@@ -72,7 +72,7 @@ export function Navbar() {
                     </div>
                   </a>
                   <a href="#" className="product-item">
-                    <div className="square-icon-medium bg-blue"></div>
+                    <div className="square-icon-medium bg-red"></div>
                     <div>
                       <div className="font-bold text-primary text-base">PickMySchoolAI</div>
                       <div className="text-sm text-secondary mt-1">Education Intelligence</div>

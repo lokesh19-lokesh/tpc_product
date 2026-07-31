@@ -8,7 +8,8 @@
   --accent-green: #00c853;
   --accent-purple: #9b51e0;
   --accent-blue: #3b82f6;
-  --accent-orange: #f97316;
+  --accent-orange: #f97315;
+  --accent-red: #b2020e;
   --border-color: #e5e7eb;
   --font-family: 'Inter', sans-serif;
   --transition-fast: 0.2s ease;
@@ -86,6 +87,8 @@ ul {
 .text-green { color: var(--accent-green); }
 .text-purple { color: var(--accent-purple); }
 .text-blue { color: var(--accent-blue); }
+.text-orange { color: var(--accent-orange); }
+.text-red { color: var(--accent-red); }
 
 /* Layout Utilities */
 .flex { display: flex; }
@@ -131,7 +134,9 @@ ul {
 .underline-green, 
 .underline-purple, 
 .underline-blue, 
-.underline-black {
+.underline-black,
+.underline-orange,
+.underline-red {
   position: relative;
   display: inline-block;
 }
@@ -139,7 +144,9 @@ ul {
 .underline-green::after, 
 .underline-purple::after, 
 .underline-blue::after, 
-.underline-black::after {
+.underline-black::after,
+.underline-orange::after,
+.underline-red::after {
   content: '';
   position: absolute;
   left: 0;
@@ -152,6 +159,8 @@ ul {
 .underline-purple::after { background-color: var(--accent-purple); }
 .underline-blue::after { background-color: var(--accent-blue); }
 .underline-black::after { background-color: var(--primary); }
+.underline-orange::after { background-color: var(--accent-orange); }
+.underline-red::after { background-color: var(--accent-red); }
 
 .square-logo {
   width: 24px;

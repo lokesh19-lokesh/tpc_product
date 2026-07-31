@@ -127,6 +127,10 @@
   background-color: var(--accent-orange);
 }
 
+.bg-red {
+  background-color: var(--accent-red);
+}
+
 .card-sidebar {
   width: 130px;
   border-right: 1px solid var(--border-color);
