@@ -6,6 +6,7 @@ import { Industries } from './components/home/Industries';
 import { WhyChooseUs } from './components/home/WhyChooseUs';
 import { PatternsLabs } from './components/home/PatternsLabs';
 import { ProductEcosystem } from './components/home/ProductEcosystem';
+import { CTA } from './components/home/CTA';
 import { Footer } from './components/layout/Footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Industries />
         <WhyChooseUs />
         <PatternsLabs />
+        <CTA />
       </main>
       <Footer />
     </div>
