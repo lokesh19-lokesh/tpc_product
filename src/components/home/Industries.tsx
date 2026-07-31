@@ -42,7 +42,7 @@ export function Industries() {
           </div>
           
           {/* Card 3: Blue Facts */}
-          <div className="ind-card ind-card-3 bg-blue">
+          <div className="ind-card ind-card-3 ind-bg-blue">
             <p className="ind-card-overline text-white">FACTS</p>
             <h3 className="ind-card-title text-white">Did you know</h3>
             <div className="ind-card-content-wrapper">

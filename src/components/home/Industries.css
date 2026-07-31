@@ -79,7 +79,7 @@
 .ind-card-arrow { margin-top: auto; align-self: flex-end; color: #9ca3af; font-size: 1.5rem; }
 
 /* Blue Card */
-.bg-blue { background-color: #0ea5e9; padding: 2.5rem; }
+.ind-bg-blue { background-color: #0ea5e9; padding: 2.5rem; }
 .ind-card-border-left-yellow { width: 3px; background-color: #fde047; flex-shrink: 0; }
 .ind-card-footer { font-size: 0.85rem; margin-top: 1.5rem; font-weight: 600; }
 .italic { font-style: italic; }
