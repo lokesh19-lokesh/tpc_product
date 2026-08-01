@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export function Footer() {
@@ -44,60 +45,60 @@ export function Footer() {
             <div className="footer-column">
               <h4 className="text-xs font-bold tracking-wider uppercase mb-6">Products</h4>
               <ul className="flex-col gap-4">
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">PatternsOS</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">MintLeafAI</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">YesTick</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">PickMySchoolAI</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Patterns Labs</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Enterprise Solutions</a></li>
+                <li><Link to="/products/patterns-os" className="text-sm text-secondary hover:text-primary transition-colors">PatternsOS</Link></li>
+                <li><Link to="/products/mint-leaf-ai" className="text-sm text-secondary hover:text-primary transition-colors">MintLeafAI</Link></li>
+                <li><Link to="/products/yestick" className="text-sm text-secondary hover:text-primary transition-colors">YesTick</Link></li>
+                <li><Link to="/products/pick-my-school-ai" className="text-sm text-secondary hover:text-primary transition-colors">PickMySchoolAI</Link></li>
+                <li><Link to="/products/patterns-labs" className="text-sm text-secondary hover:text-primary transition-colors">Patterns Labs</Link></li>
+                <li><Link to="/products/enterprise-solutions" className="text-sm text-secondary hover:text-primary transition-colors">Enterprise Solutions</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="text-xs font-bold tracking-wider uppercase mb-6">Industries</h4>
               <ul className="flex-col gap-4">
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Manufacturing</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Healthcare</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Education</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Retail</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Hospitality</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Construction</a></li>
+                <li><Link to="/industries/manufacturing" className="text-sm text-secondary hover:text-primary transition-colors">Manufacturing</Link></li>
+                <li><Link to="/industries/healthcare" className="text-sm text-secondary hover:text-primary transition-colors">Healthcare</Link></li>
+                <li><Link to="/industries/education" className="text-sm text-secondary hover:text-primary transition-colors">Education</Link></li>
+                <li><Link to="/industries/retail" className="text-sm text-secondary hover:text-primary transition-colors">Retail</Link></li>
+                <li><Link to="/industries/hospitality" className="text-sm text-secondary hover:text-primary transition-colors">Hospitality</Link></li>
+                <li><Link to="/industries/construction" className="text-sm text-secondary hover:text-primary transition-colors">Construction</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="text-xs font-bold tracking-wider uppercase mb-6">Solutions</h4>
               <ul className="flex-col gap-4">
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Operations</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Sales & CRM</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Finance</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Predictive maintenance</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Customer intelligence</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Compliance</a></li>
+                <li><Link to="/solutions/operations" className="text-sm text-secondary hover:text-primary transition-colors">Operations</Link></li>
+                <li><Link to="/solutions/sales-crm" className="text-sm text-secondary hover:text-primary transition-colors">Sales & CRM</Link></li>
+                <li><Link to="/solutions/finance" className="text-sm text-secondary hover:text-primary transition-colors">Finance</Link></li>
+                <li><Link to="/solutions/predictive-maintenance" className="text-sm text-secondary hover:text-primary transition-colors">Predictive maintenance</Link></li>
+                <li><Link to="/solutions/customer-intelligence" className="text-sm text-secondary hover:text-primary transition-colors">Customer intelligence</Link></li>
+                <li><Link to="/solutions/compliance" className="text-sm text-secondary hover:text-primary transition-colors">Compliance</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="text-xs font-bold tracking-wider uppercase mb-6">Resources</h4>
               <ul className="flex-col gap-4">
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Documentation</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Customer stories</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Newsroom</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Security</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Status</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Support</a></li>
+                <li><Link to="/resources/documentation" className="text-sm text-secondary hover:text-primary transition-colors">Documentation</Link></li>
+                <li><Link to="/resources/customer-stories" className="text-sm text-secondary hover:text-primary transition-colors">Customer stories</Link></li>
+                <li><Link to="/resources/newsroom" className="text-sm text-secondary hover:text-primary transition-colors">Newsroom</Link></li>
+                <li><Link to="/resources/security" className="text-sm text-secondary hover:text-primary transition-colors">Security</Link></li>
+                <li><Link to="/resources/status" className="text-sm text-secondary hover:text-primary transition-colors">Status</Link></li>
+                <li><Link to="/resources/support" className="text-sm text-secondary hover:text-primary transition-colors">Support</Link></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4 className="text-xs font-bold tracking-wider uppercase mb-6">Company</h4>
               <ul className="flex-col gap-4">
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">About</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Careers</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Leadership</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Partners</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Investors</a></li>
-                <li><a href="#" className="text-sm text-secondary hover:text-primary transition-colors">Contact</a></li>
+                <li><Link to="/company/about" className="text-sm text-secondary hover:text-primary transition-colors">About</Link></li>
+                <li><Link to="/company/careers" className="text-sm text-secondary hover:text-primary transition-colors">Careers</Link></li>
+                <li><Link to="/company/leadership" className="text-sm text-secondary hover:text-primary transition-colors">Leadership</Link></li>
+                <li><Link to="/company/partners" className="text-sm text-secondary hover:text-primary transition-colors">Partners</Link></li>
+                <li><Link to="/company/investors" className="text-sm text-secondary hover:text-primary transition-colors">Investors</Link></li>
+                <li><Link to="/company/contact" className="text-sm text-secondary hover:text-primary transition-colors">Contact</Link></li>
               </ul>
             </div>
           </div>
@@ -111,11 +112,11 @@ export function Footer() {
               © 2026 The Patterns Company. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-white">
-              <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Cookies</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Trust Center</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Accessibility</a>
+              <Link to="/privacy" className="hover:text-gray-300 transition-colors">Privacy</Link>
+              <Link to="/terms" className="hover:text-gray-300 transition-colors">Terms</Link>
+              <Link to="/cookies" className="hover:text-gray-300 transition-colors">Cookies</Link>
+              <Link to="/trust-center" className="hover:text-gray-300 transition-colors">Trust Center</Link>
+              <Link to="/accessibility" className="hover:text-gray-300 transition-colors">Accessibility</Link>
             </div>
           </div>
         </div>
