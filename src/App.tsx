@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ScrollToTop } from './components/layout/ScrollToTop';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
@@ -55,6 +56,7 @@ import { BookDemo } from './pages/auth/BookDemo';
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="app-wrapper">
         <Navbar />
         <Routes>
