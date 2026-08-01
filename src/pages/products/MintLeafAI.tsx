@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 export function MintLeafAI() {
+  useEffect(() => {
+    document.documentElement.style.setProperty('--active-product-color', 'var(--accent-purple)');
+  }, []);
+
   return (
     <main style={{ padding: '8rem 2rem', minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>MintLeafAI</h1>
