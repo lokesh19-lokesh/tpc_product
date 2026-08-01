@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ProductEcosystem.css';
 
 export function ProductEcosystem() {
@@ -9,7 +10,8 @@ export function ProductEcosystem() {
       description: 'Machine-level telemetry, predictive maintenance and production planning in a single operational surface.',
       className: 'manufacturing',
       image: '/images/manufacturing_bg_1785483405758.png',
-      colorClass: 'explore-green'
+      colorClass: 'explore-green',
+      path: '/products/patterns-os'
     },
     {
       id: 'mint-leaf-ai',
@@ -18,7 +20,8 @@ export function ProductEcosystem() {
       description: 'Patient flow, documentation and revenue cycle intelligence built for hospitals and multi-site clinics.',
       className: 'healthcare',
       image: '/images/healthcare_bg_1785483416290.png',
-      colorClass: 'explore-purple'
+      colorClass: 'explore-purple',
+      path: '/products/mint-leaf-ai'
     },
     {
       id: 'yestick',
@@ -27,7 +30,8 @@ export function ProductEcosystem() {
       description: 'A WhatsApp-first CRM where pipeline, campaigns and support live inside the thread your customer already uses.',
       className: 'hospitality',
       image: '/images/hospitality_bg_1785483450990.png',
-      colorClass: 'explore-green'
+      colorClass: 'explore-green',
+      path: '/products/yestick'
     },
     {
       id: 'pick-my-school',
@@ -36,7 +40,8 @@ export function ProductEcosystem() {
       description: 'From enquiry to enrolment to learning outcomes — the intelligence layer for modern institutions.',
       className: 'education',
       image: '/images/education_bg_1785483427832.png',
-      colorClass: 'explore-blue'
+      colorClass: 'explore-blue',
+      path: '/products/pick-my-school-ai'
     },
     {
       id: 'patterns-labs',
@@ -45,7 +50,8 @@ export function ProductEcosystem() {
       description: 'Frontier research in reasoning, forecasting and autonomous operations — shipped into products people use daily.',
       className: 'construction',
       image: '/images/construction_bg_1785483463000.png',
-      colorClass: 'explore-white'
+      colorClass: 'explore-white',
+      path: '/products/patterns-labs'
     },
     {
       id: 'enterprise-solutions',
@@ -54,7 +60,8 @@ export function ProductEcosystem() {
       description: 'Private cloud, bespoke models and dedicated engineering for organisations operating at national scale.',
       className: 'enterprise',
       image: '/images/enterprise_bg_1785484546004.png',
-      colorClass: 'explore-orange'
+      colorClass: 'explore-orange',
+      path: '/products/enterprise-solutions'
     }
   ];
 
@@ -83,9 +90,9 @@ export function ProductEcosystem() {
                 <h3 className="bento-title">{product.title}</h3>
                 <p className="bento-description">{product.description}</p>
                 <div className="bento-explore mt-4">
-                  <span className={`explore-btn font-semibold text-sm ${product.colorClass} flex items-center gap-1`}>
+                  <Link to={product.path} className={`explore-btn font-semibold text-sm ${product.colorClass} flex items-center gap-1`}>
                     Explore <span>→</span>
-                  </span>
+                  </Link>
                 </div>
               </div>
             </div>
