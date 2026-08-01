@@ -1,10 +1,22 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
+  const isProductPage = location.pathname.startsWith('/products/');
+  
+  const navbarTheme = isHomePage ? 'theme-dark' : (isProductPage ? 'theme-product' : 'theme-light');
+
+  // Close mobile menu on location change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setOpenDropdown(null);
+  }, [location.pathname]);
 
   const toggleDropdown = (name: string, e: React.MouseEvent) => {
     if (window.innerWidth <= 1024) {
@@ -14,7 +26,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${navbarTheme}`}>
       <div className="container navbar-container flex items-center justify-between">
         <Link to="/" className="flex items-center z-10">
           <img src="/logo.png" alt="The Patterns Company" className="logo-img" />

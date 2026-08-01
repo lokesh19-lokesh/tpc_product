@@ -257,3 +257,62 @@
     color: white;
   }
 }
+
+/* Navbar Theme Overrides */
+/* Home (Dark Theme) */
+.navbar.theme-dark {
+  /* Inherit the dynamic --active-product-color from the base .navbar class */
+}
+
+/* Products (Product Theme) */
+.navbar.theme-product {
+  background-color: var(--active-product-color, var(--primary));
+}
+
+/* Remaining Pages (Light Theme) */
+.navbar.theme-light {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar.theme-light .logo-img {
+  filter: none;
+}
+
+.navbar.theme-light .nav-link {
+  color: var(--text-primary);
+}
+
+.navbar.theme-light .nav-link:hover,
+.navbar.theme-light .nav-item.has-dropdown:hover .nav-link {
+  color: var(--primary);
+}
+
+.navbar.theme-light .btn-ghost {
+  color: var(--text-primary);
+}
+
+.navbar.theme-light .btn-ghost:hover {
+  background-color: #f3f4f6;
+  color: var(--primary);
+}
+
+.navbar.theme-light .btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.navbar.theme-light .btn-primary:hover {
+  background-color: #111827;
+}
+
+.navbar.theme-light .mobile-menu-btn {
+  color: var(--text-primary);
+}
+
+/* Mobile specific light theme fixes */
+@media (max-width: 1023px) {
+  .navbar.theme-light .nav-link {
+    color: var(--text-primary);
+  }
+}
