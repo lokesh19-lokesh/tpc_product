@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
   .approach-section {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem 1rem 1rem;
   }
   .approach-grid {
     grid-template-columns: repeat(3, 1fr);
