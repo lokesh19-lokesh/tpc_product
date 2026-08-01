@@ -135,14 +135,15 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   margin-top: 4rem;
 }
 
 @media (min-width: 768px) {
   .features-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -219,5 +220,47 @@
   
   .patterns-os-features {
     padding: 4rem 0;
+  }
+
+  .feature-card {
+    padding: 1rem 0.5rem;
+    border-radius: 16px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .feature-card p {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .feature-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .feature-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
   }
 }
