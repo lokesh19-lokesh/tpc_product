@@ -159,6 +159,7 @@
     gap: 2rem;
     overflow-y: auto;
     display: none;
+    margin-left: 0;
   }
   
   .nav-menu-wrapper.open {
@@ -180,6 +181,12 @@
     display: flex;
     width: 100%;
     border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+  }
+
+  .nav-item.has-dropdown:hover .nav-link,
+  .nav-link:hover {
+    color: var(--primary);
   }
   
   .dropdown-menu {
@@ -231,5 +238,22 @@
 
   .nav-actions button {
     width: 100%;
+  }
+
+  .navbar .btn-ghost {
+    color: var(--text-primary);
+  }
+  .navbar .btn-ghost:hover {
+    background-color: var(--border-color);
+    color: var(--primary);
+  }
+
+  .navbar .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+  .navbar .btn-primary:hover {
+    background-color: #333;
+    color: white;
   }
 }
