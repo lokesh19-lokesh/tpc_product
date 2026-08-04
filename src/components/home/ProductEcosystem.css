@@ -133,10 +133,13 @@
 
 .ecosystem-bento-item.manufacturing {
   grid-column: span 6;
+  min-height: 600px;
 }
 
 .ecosystem-bento-item.healthcare {
   grid-column: span 6;
+  height: 280px;
+  align-self: start;
 }
 
 .ecosystem-bento-item.hospitality {
