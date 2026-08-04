@@ -131,13 +131,12 @@
   color: #f97316;
 }
 
-/* Grid Spans */
 .ecosystem-bento-item.manufacturing {
-  grid-column: span 8;
+  grid-column: span 6;
 }
 
 .ecosystem-bento-item.healthcare {
-  grid-column: span 4;
+  grid-column: span 6;
 }
 
 .ecosystem-bento-item.hospitality {
