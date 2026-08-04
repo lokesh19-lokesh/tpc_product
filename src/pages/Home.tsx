@@ -1,3 +1,4 @@
+import { SEO } from '../components/seo/SEO';
 import { Hero } from '../components/home/Hero';
 import { TrustedBy } from '../components/home/TrustedBy';
 import { OurApproach } from '../components/home/OurApproach';
@@ -13,6 +14,12 @@ import { CTA } from '../components/home/CTA';
 export function Home() {
   return (
     <main>
+      <SEO 
+        title="The Patterns Company" 
+        description="The Patterns Company delivers enterprise AI solutions, foundational models, and data intelligence platforms designed to scale your operations." 
+        keywords="The Patterns Company, AI, enterprise solutions, artificial intelligence, foundational models"
+        path="/" 
+      />
       <Hero />
       <TrustedBy />
       <OurApproach />

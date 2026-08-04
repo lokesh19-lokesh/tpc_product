@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function DigitalStrategy() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Digital Strategy" 
+        description="Explore our Digital Strategy solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Digital Strategy solutions, digital transformation, AI for Digital Strategy, enterprise architecture"
+        path="/solutions/digital-strategy" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Solutions.css';
@@ -9,6 +10,12 @@ export function SalesCRM() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Sales C R M" 
+        description="Explore our Sales C R M solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Sales C R M solutions, digital transformation, AI for Sales C R M, enterprise architecture"
+        path="/solutions/sales-crm" 
+      />
       {/* HERO SECTION */}
       <section className="solution-hero">
         <div className="container">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Company.css';
@@ -10,6 +11,12 @@ export function About() {
 
   return (
     <main className="company-page">
+      <SEO 
+        title="About" 
+        description="Learn more about The Patterns Company: our mission, leadership, and careers. Join us in building the future of AI." 
+        keywords="About, The Patterns Company, AI, enterprise solutions, company"
+        path="/company/about" 
+      />
       {/* Premium Hero Section */}
       <section className="about-hero">
         <div className="container hero-container">

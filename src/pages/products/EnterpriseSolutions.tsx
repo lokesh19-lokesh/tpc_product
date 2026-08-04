@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './EnterpriseSolutions.css';
@@ -10,6 +11,12 @@ export function EnterpriseSolutions() {
 
   return (
     <div className="enterprise-solutions-page">
+      <SEO 
+        title="Enterprise Solutions" 
+        description="Discover Enterprise Solutions, our enterprise AI product designed to scale your operations, automate workflows, and drive intelligence." 
+        keywords="Enterprise Solutions, AI product, enterprise AI, The Patterns Company, artificial intelligence platform"
+        path="/products/enterprise-solutions" 
+      />
       {/* Hero Section */}
       <section className="enterprise-solutions-hero">
         <div className="floating-icons">

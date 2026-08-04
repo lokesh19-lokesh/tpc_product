@@ -1,8 +1,15 @@
+import { SEO } from '../../components/seo/SEO';
 import { LegalLayout } from './LegalLayout';
 
 export function Accessibility() {
   return (
     <LegalLayout title="Accessibility Statement" lastUpdated="May 10, 2026">
+      <SEO 
+        title="Accessibility" 
+        description="Read the Accessibility for The Patterns Company. We are committed to transparency, privacy, and compliance." 
+        keywords="Accessibility, The Patterns Company, AI, enterprise solutions, legal"
+        path="/legal/accessibility" 
+      />
       <h2>Our Commitment to Accessibility</h2>
       <p>
         The Patterns Company is committed to making our website's content accessible and user-friendly to everyone. We believe that technology, particularly AI, should empower all individuals regardless of their physical or cognitive abilities.
@@ -33,7 +40,7 @@ export function Accessibility() {
 
       <h2>4. Feedback and Contact</h2>
       <p>
-        If you are having difficulty viewing or navigating the content on this website, or notice any content, feature, or functionality that you believe is not fully accessible to people with disabilities, please call our Customer Service team at (800) 555-0199 or email our team at <a href="mailto:accessibility@thepatternscompany.com">accessibility@thepatternscompany.com</a> with “Disabled Access” in the subject line.
+        If you are having difficulty viewing or navigating the content on this website, or notice any content, feature, or functionality that you believe is not fully accessible to people with disabilities, please call our Customer Service team at +91-9392557785 or email our team at <a href="mailto:info@thepatternscompany.com">info@thepatternscompany.com</a> with “Disabled Access” in the subject line.
       </p>
       <p>
         Please provide a description of the specific feature you feel is not fully accessible or a suggestion for improvement. We take your feedback seriously and will consider it as we evaluate ways to accommodate all of our customers and our overall accessibility policies.

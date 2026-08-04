@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import './Company.css';
 
@@ -9,6 +10,12 @@ export function Investors() {
 
   return (
     <main className="company-page">
+      <SEO 
+        title="Investors" 
+        description="Learn more about The Patterns Company: our mission, leadership, and careers. Join us in building the future of AI." 
+        keywords="Investors, The Patterns Company, AI, enterprise solutions, company"
+        path="/company/investors" 
+      />
       {/* Premium Hero Section */}
       <section className="about-hero">
         <div className="container hero-container">

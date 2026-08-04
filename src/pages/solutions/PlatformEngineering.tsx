@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function PlatformEngineering() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Platform Engineering" 
+        description="Explore our Platform Engineering solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Platform Engineering solutions, digital transformation, AI for Platform Engineering, enterprise architecture"
+        path="/solutions/platform-engineering" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

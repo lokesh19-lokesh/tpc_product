@@ -1,8 +1,15 @@
+import { SEO } from '../../components/seo/SEO';
 import { LegalLayout } from './LegalLayout';
 
 export function Terms() {
   return (
     <LegalLayout title="Terms of Service" lastUpdated="July 1, 2026">
+      <SEO 
+        title="Terms" 
+        description="Read the Terms for The Patterns Company. We are committed to transparency, privacy, and compliance." 
+        keywords="Terms, The Patterns Company, AI, enterprise solutions, legal"
+        path="/legal/terms" 
+      />
       <h2>1. Agreement to Terms</h2>
       <p>
         These Terms of Service ("Terms") constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and The Patterns Company ("we," "us," or "our"), concerning your access to and use of our website and AI software platforms.

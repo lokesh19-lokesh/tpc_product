@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './CustomerStories.css';
@@ -10,6 +11,12 @@ export function CustomerStories() {
 
   return (
     <div className="customer-stories-page">
+      <SEO 
+        title="Customer Stories" 
+        description="Learn more about Customer Stories at The Patterns Company. We provide enterprise solutions for resources." 
+        keywords="Customer Stories, The Patterns Company, AI, enterprise solutions, resources"
+        path="/resources/customer-stories" 
+      />
       
       {/* HERO SECTION */}
       <section className="stories-hero">

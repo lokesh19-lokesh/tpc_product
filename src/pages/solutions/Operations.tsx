@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Solutions.css';
@@ -9,6 +10,12 @@ export function Operations() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Operations" 
+        description="Explore our Operations solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Operations solutions, digital transformation, AI for Operations, enterprise architecture"
+        path="/solutions/operations" 
+      />
       {/* HERO SECTION */}
       <section className="solution-hero">
         <div className="container">

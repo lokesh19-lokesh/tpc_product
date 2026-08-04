@@ -1,9 +1,16 @@
+import { SEO } from '../../components/seo/SEO';
 import { LegalLayout } from './LegalLayout';
 import { Link } from 'react-router-dom';
 
 export function TrustCenter() {
   return (
     <LegalLayout title="Trust Center" lastUpdated="April 20, 2026">
+      <SEO 
+        title="Trust Center" 
+        description="Read the Trust Center for The Patterns Company. We are committed to transparency, privacy, and compliance." 
+        keywords="Trust Center, The Patterns Company, AI, enterprise solutions, legal"
+        path="/legal/trust-center" 
+      />
       <h2>Security is our Foundation</h2>
       <p>
         At The Patterns Company, we understand that deploying AI in an enterprise environment requires absolute trust. Our Trust Center outlines the comprehensive security, compliance, and privacy controls we have implemented to protect your most sensitive data.

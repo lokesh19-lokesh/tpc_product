@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import './Resources.css';
 
@@ -9,6 +10,12 @@ export function Support() {
 
   return (
     <main className="resource-page">
+      <SEO 
+        title="Support" 
+        description="Learn more about Support at The Patterns Company. We provide enterprise solutions for resources." 
+        keywords="Support, The Patterns Company, AI, enterprise solutions, resources"
+        path="/resources/support" 
+      />
       {/* Hero Section */}
       <section className="resource-hero">
         <div className="container">

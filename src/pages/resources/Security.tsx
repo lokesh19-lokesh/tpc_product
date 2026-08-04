@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import './Resources.css';
 
@@ -9,6 +10,12 @@ export function Security() {
 
   return (
     <main className="resource-page">
+      <SEO 
+        title="Security" 
+        description="Learn more about Security at The Patterns Company. We provide enterprise solutions for resources." 
+        keywords="Security, The Patterns Company, AI, enterprise solutions, resources"
+        path="/resources/security" 
+      />
       {/* Hero Section */}
       <section className="resource-hero">
         <div className="container">

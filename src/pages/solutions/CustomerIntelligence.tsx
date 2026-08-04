@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Solutions.css';
@@ -9,6 +10,12 @@ export function CustomerIntelligence() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Customer Intelligence" 
+        description="Explore our Customer Intelligence solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Customer Intelligence solutions, digital transformation, AI for Customer Intelligence, enterprise architecture"
+        path="/solutions/customer-intelligence" 
+      />
       {/* HERO SECTION */}
       <section className="solution-hero">
         <div className="container">

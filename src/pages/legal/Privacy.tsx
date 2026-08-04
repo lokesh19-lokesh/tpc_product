@@ -1,8 +1,15 @@
+import { SEO } from '../../components/seo/SEO';
 import { LegalLayout } from './LegalLayout';
 
 export function Privacy() {
   return (
     <LegalLayout title="Privacy Policy" lastUpdated="August 12, 2026">
+      <SEO 
+        title="Privacy" 
+        description="Read the Privacy for The Patterns Company. We are committed to transparency, privacy, and compliance." 
+        keywords="Privacy, The Patterns Company, AI, enterprise solutions, legal"
+        path="/legal/privacy" 
+      />
       <h2>1. Introduction</h2>
       <p>
         At The Patterns Company ("we," "us," or "our"), we are committed to protecting the privacy and security of your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our enterprise AI solutions.

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function EngineeringRD() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Engineering R D" 
+        description="Explore our Engineering R D solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Engineering R D solutions, digital transformation, AI for Engineering R D, enterprise architecture"
+        path="/solutions/engineering-rd" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

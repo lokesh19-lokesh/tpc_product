@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Solutions.css';
@@ -9,6 +10,12 @@ export function Compliance() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Compliance" 
+        description="Explore our Compliance solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Compliance solutions, digital transformation, AI for Compliance, enterprise architecture"
+        path="/solutions/compliance" 
+      />
       {/* HERO SECTION */}
       <section className="solution-hero">
         <div className="container">

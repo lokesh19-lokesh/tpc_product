@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Solutions.css';
@@ -9,6 +10,12 @@ export function PredictiveMaintenance() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Predictive Maintenance" 
+        description="Explore our Predictive Maintenance solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Predictive Maintenance solutions, digital transformation, AI for Predictive Maintenance, enterprise architecture"
+        path="/solutions/predictive-maintenance" 
+      />
       {/* HERO SECTION */}
       <section className="solution-hero">
         <div className="container">

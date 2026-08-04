@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import './PickMySchoolAI.css';
 
@@ -18,6 +19,12 @@ export function PickMySchoolAI() {
 
   return (
     <div className="pick-my-school-page">
+      <SEO 
+        title="Pick My School A I" 
+        description="Discover Pick My School A I, our enterprise AI product designed to scale your operations, automate workflows, and drive intelligence." 
+        keywords="Pick My School A I, AI product, enterprise AI, The Patterns Company, artificial intelligence platform"
+        path="/products/pick-my-school-ai" 
+      />
       {/* Hero Section */}
       <section className="pms-hero">
         <div className="floating-icons">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Company.css';
@@ -16,6 +17,12 @@ export function Newsroom() {
 
   return (
     <main className="company-page">
+      <SEO 
+        title="Newsroom" 
+        description="Learn more about The Patterns Company: our mission, leadership, and careers. Join us in building the future of AI." 
+        keywords="Newsroom, The Patterns Company, AI, enterprise solutions, company"
+        path="/company/newsroom" 
+      />
       {/* Premium Hero Section */}
       <section className="about-hero">
         <div className="container hero-container">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './PatternsOS.css';
@@ -10,6 +11,12 @@ export function PatternsOS() {
 
   return (
     <div className="patterns-os-page">
+      <SEO 
+        title="Patterns O S" 
+        description="Discover Patterns O S, our enterprise AI product designed to scale your operations, automate workflows, and drive intelligence." 
+        keywords="Patterns O S, AI product, enterprise AI, The Patterns Company, artificial intelligence platform"
+        path="/products/patterns-os" 
+      />
       {/* Hero Section */}
       <section className="patterns-os-hero">
         <div className="floating-icons">

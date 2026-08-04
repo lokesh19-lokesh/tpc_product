@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function MobileAppDev() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Mobile App Dev" 
+        description="Explore our Mobile App Dev solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Mobile App Dev solutions, digital transformation, AI for Mobile App Dev, enterprise architecture"
+        path="/solutions/mobile-app-dev" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

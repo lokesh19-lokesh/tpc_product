@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function DevSecOps() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Dev Sec Ops" 
+        description="Explore our Dev Sec Ops solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Dev Sec Ops solutions, digital transformation, AI for Dev Sec Ops, enterprise architecture"
+        path="/solutions/dev-sec-ops" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

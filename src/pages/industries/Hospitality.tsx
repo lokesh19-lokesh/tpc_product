@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Industry.css';
@@ -9,6 +10,12 @@ export function Hospitality() {
 
   return (
     <div className="industry-page">
+      <SEO 
+        title="Hospitality" 
+        description="The Patterns Company provides powerful AI solutions tailored for the Hospitality industry to optimize processes and increase efficiency." 
+        keywords="Hospitality AI solutions, enterprise AI for Hospitality, The Patterns Company Hospitality, data intelligence"
+        path="/industries/hospitality" 
+      />
       {/* HERO SECTION */}
       <section className="industry-hero">
         <div className="container">

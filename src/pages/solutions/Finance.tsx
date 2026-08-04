@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Solutions.css';
@@ -9,6 +10,12 @@ export function Finance() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Finance" 
+        description="Explore our Finance solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Finance solutions, digital transformation, AI for Finance, enterprise architecture"
+        path="/solutions/finance" 
+      />
       {/* HERO SECTION */}
       <section className="solution-hero">
         <div className="container">

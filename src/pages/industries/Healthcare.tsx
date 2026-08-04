@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Industry.css';
@@ -9,6 +10,12 @@ export function Healthcare() {
 
   return (
     <div className="industry-page">
+      <SEO 
+        title="Healthcare" 
+        description="The Patterns Company provides powerful AI solutions tailored for the Healthcare industry to optimize processes and increase efficiency." 
+        keywords="Healthcare AI solutions, enterprise AI for Healthcare, The Patterns Company Healthcare, data intelligence"
+        path="/industries/healthcare" 
+      />
       {/* HERO SECTION */}
       <section className="industry-hero">
         <div className="container">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Industry.css';
@@ -9,6 +10,12 @@ export function Education() {
 
   return (
     <div className="industry-page">
+      <SEO 
+        title="Education" 
+        description="The Patterns Company provides powerful AI solutions tailored for the Education industry to optimize processes and increase efficiency." 
+        keywords="Education AI solutions, enterprise AI for Education, The Patterns Company Education, data intelligence"
+        path="/industries/education" 
+      />
       {/* HERO SECTION */}
       <section className="industry-hero">
         <div className="container">

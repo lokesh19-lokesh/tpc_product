@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function UiUxDesign() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Ui Ux Design" 
+        description="Explore our Ui Ux Design solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Ui Ux Design solutions, digital transformation, AI for Ui Ux Design, enterprise architecture"
+        path="/solutions/ui-ux-design" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Company.css';
@@ -18,6 +19,12 @@ export function Careers() {
 
   return (
     <main className="company-page">
+      <SEO 
+        title="Careers" 
+        description="Learn more about The Patterns Company: our mission, leadership, and careers. Join us in building the future of AI." 
+        keywords="Careers, The Patterns Company, AI, enterprise solutions, company"
+        path="/company/careers" 
+      />
       <section className="company-hero">
         <div className="container">
           <h1>Build the future with us</h1>

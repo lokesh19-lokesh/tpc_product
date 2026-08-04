@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Documentation.css';
@@ -11,6 +12,12 @@ export function Documentation() {
 
   return (
     <main className="docs-page">
+      <SEO 
+        title="Documentation" 
+        description="Learn more about Documentation at The Patterns Company. We provide enterprise solutions for resources." 
+        keywords="Documentation, The Patterns Company, AI, enterprise solutions, resources"
+        path="/resources/documentation" 
+      />
       {/* 1. HERO SECTION */}
       <section className="docs-hero">
         <div className="container relative z-10">

@@ -1,8 +1,15 @@
+import { SEO } from '../../components/seo/SEO';
 import { LegalLayout } from './LegalLayout';
 
 export function Cookies() {
   return (
     <LegalLayout title="Cookie Policy" lastUpdated="January 15, 2026">
+      <SEO 
+        title="Cookies" 
+        description="Read the Cookies for The Patterns Company. We are committed to transparency, privacy, and compliance." 
+        keywords="Cookies, The Patterns Company, AI, enterprise solutions, legal"
+        path="/legal/cookies" 
+      />
       <h2>1. What Are Cookies?</h2>
       <p>
         Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.

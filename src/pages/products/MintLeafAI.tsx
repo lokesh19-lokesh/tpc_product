@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import './MintLeafAI.css';
 
@@ -8,6 +9,12 @@ export function MintLeafAI() {
 
   return (
     <div className="mint-leaf-page">
+      <SEO 
+        title="Mint Leaf A I" 
+        description="Discover Mint Leaf A I, our enterprise AI product designed to scale your operations, automate workflows, and drive intelligence." 
+        keywords="Mint Leaf A I, AI product, enterprise AI, The Patterns Company, artificial intelligence platform"
+        path="/products/mint-leaf-ai" 
+      />
       {/* Hero Section */}
       <section className="mint-leaf-hero">
         <div className="floating-icons">

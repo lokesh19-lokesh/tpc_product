@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function NetworkServices() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Network Services" 
+        description="Explore our Network Services solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Network Services solutions, digital transformation, AI for Network Services, enterprise architecture"
+        path="/solutions/network-services" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

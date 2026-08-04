@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Send, Users, MessageSquare, Bot, Share2, BarChart, Zap, Bell, Shield, Check, Crown } from 'lucide-react';
 import './YesTick.css';
@@ -74,6 +75,12 @@ export function YesTick() {
 
   return (
     <div className="yestick-page">
+      <SEO 
+        title="Yes Tick" 
+        description="Discover Yes Tick, our enterprise AI product designed to scale your operations, automate workflows, and drive intelligence." 
+        keywords="Yes Tick, AI product, enterprise AI, The Patterns Company, artificial intelligence platform"
+        path="/products/yes-tick" 
+      />
       {/* Hero Section */}
       <section className="yestick-hero">
         <div className="floating-icons">

@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function CloudServices() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Cloud Services" 
+        description="Explore our Cloud Services solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Cloud Services solutions, digital transformation, AI for Cloud Services, enterprise architecture"
+        path="/solutions/cloud-services" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

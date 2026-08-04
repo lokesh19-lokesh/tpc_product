@@ -1,3 +1,4 @@
+import { SEO } from '../../components/seo/SEO';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceTemplate.css';
@@ -10,6 +11,12 @@ export function DataAndAI() {
 
   return (
     <div className="solution-page">
+      <SEO 
+        title="Data And A I" 
+        description="Explore our Data And A I solutions to accelerate digital transformation, ensure compliance, and build robust enterprise architectures." 
+        keywords="Data And A I solutions, digital transformation, AI for Data And A I, enterprise architecture"
+        path="/solutions/data-and-ai" 
+      />
       {/* 1. HERO SECTION */}
       <section className="solution-hero">
         <div className="container relative z-10">

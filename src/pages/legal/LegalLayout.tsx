@@ -53,7 +53,7 @@ export function LegalLayout({ children, title, lastUpdated }: LegalLayoutProps) 
             <div className="legal-sidebar-card">
               <h4>Questions?</h4>
               <p>Contact our compliance team if you have any questions regarding these policies.</p>
-              <a href="mailto:legal@thepatternscompany.com">legal@thepatternscompany.com</a>
+              <a href="mailto:info@thepatternscompany.com">info@thepatternscompany.com</a>
             </div>
           </aside>
           
