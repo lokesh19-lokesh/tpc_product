@@ -118,6 +118,28 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+        {/* Contact Info Row */}
+        <div className="contact-info-row">
+          <div className="contact-info-item">
+            <h4 className="text-xs font-bold tracking-wider uppercase mb-2">Address</h4>
+            <p className="text-sm text-secondary leading-relaxed pr-8">
+              T- HuB 2.o, Inorbit Mall Rd, Vittal Rao Nagar, Knowledge City, Madhapur, Hyderabad, Telangana 500081
+            </p>
+          </div>
+          <div className="contact-info-item">
+            <h4 className="text-xs font-bold tracking-wider uppercase mb-2">Call Us</h4>
+            <a href="tel:+919392557785" className="text-sm text-secondary hover:text-primary transition-colors block">
+              +91-9392557785
+            </a>
+          </div>
+          <div className="contact-info-item">
+            <h4 className="text-xs font-bold tracking-wider uppercase mb-2">Email Us</h4>
+            <a href="mailto:info@thepatternscompany.com" className="text-sm text-secondary hover:text-primary transition-colors block">
+              info@thepatternscompany.com
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="footer-bottom-wrapper">

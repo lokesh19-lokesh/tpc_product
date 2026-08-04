@@ -63,3 +63,23 @@
     margin-top: 2.5rem;
   }
 }
+
+.contact-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .contact-info-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-info-item {
+  flex: 1;
+}
