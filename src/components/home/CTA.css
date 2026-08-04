@@ -1,4 +1,4 @@
-.cta-section {
+.home-cta-section {
   background-color: #ffffff;
   padding: 8rem 1.5rem 0;
   width: 100%;
@@ -64,7 +64,7 @@
 }
 
 @media (max-width: 768px) {
-  .cta-section {
+  .home-cta-section {
     padding-top: 5rem;
   }
   .cta-container {
