@@ -229,7 +229,20 @@
 
 @media (max-width: 640px) {
   .process-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+  }
+  .step-number {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .step-title {
+    font-size: 1.1rem;
+  }
+  .step-desc {
+    font-size: 0.85rem;
   }
   .rich-features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -250,6 +263,16 @@
   .rich-feature-card p {
     font-size: 0.85rem;
     line-height: 1.4;
+  }
+  .outcomes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .outcome-card {
+    padding: 1rem;
+  }
+  .outcome-stat {
+    font-size: 2rem;
   }
 }
 
