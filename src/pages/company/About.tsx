@@ -10,50 +10,90 @@ export function About() {
 
   return (
     <main className="company-page">
-      <section className="company-hero">
-        <div className="container">
-          <h1>About Us</h1>
-          <p>We are a global team of engineers, designers, and strategists obsessed with building the future of enterprise software.</p>
+      {/* Premium Hero Section */}
+      <section className="about-hero">
+        <div className="container hero-container">
+          <div className="about-hero-content">
+            <span className="hero-overline">The Patterns Company</span>
+            <h1 className="hero-title">Pioneering the future of <span className="text-gradient">enterprise AI</span></h1>
+            <p className="hero-subtitle">
+              We are a global team of engineers, designers, and strategists obsessed with demystifying complex technology and building intuitive platforms for the world's most ambitious organizations.
+            </p>
+          </div>
         </div>
+        <div className="hero-background-pattern"></div>
       </section>
 
-      <section className="company-section">
-        <div className="container about-grid">
-          <div className="about-text">
-            <h3>Our Mission</h3>
-            <p>At The Patterns Company, our mission is to demystify complex technology and turn it into actionable, scalable, and intuitive platforms for enterprises worldwide.</p>
-            <p>Founded on the belief that digital transformation shouldn't be a painful, decade-long process, we bring agility, deep technical expertise, and a human-centered design approach to every engagement.</p>
-            <Link to="/company/leadership" className="inline-block mt-4 text-primary font-bold">Meet our Leadership &rarr;</Link>
-          </div>
-          <div className="about-image">
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team collaborating" className="w-full h-auto" />
+      {/* By The Numbers Section */}
+      <section className="stats-section">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat-card">
+              <h3>5+</h3>
+              <p>Years of Innovation</p>
+            </div>
+            <div className="stat-card">
+              <h3>50+</h3>
+              <p>Enterprise Clients</p>
+            </div>
+            <div className="stat-card">
+              <h3>12</h3>
+              <p>Global Offices</p>
+            </div>
+            <div className="stat-card">
+              <h3>200+</h3>
+              <p>World-class Engineers</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="company-section-alt">
+      {/* Our Story Section */}
+      <section className="company-section story-section">
+        <div className="container about-grid">
+          <div className="about-image">
+            <div className="image-wrapper">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Team collaborating in a modern office" className="story-img" />
+              <div className="image-overlay"></div>
+            </div>
+          </div>
+          <div className="about-text">
+            <span className="section-overline">Our Story</span>
+            <h2>Born from the need for agility</h2>
+            <p>Founded on the belief that digital transformation shouldn't be a painful, decade-long process. We saw enterprises struggling with legacy systems and fragmented data, and we knew there was a better way.</p>
+            <p>Today, The Patterns Company brings deep technical expertise and a human-centered design approach to every engagement. We don't just build software; we architect the operational surface of tomorrow's enterprise.</p>
+            
+            <div className="mission-card">
+              <h3>Our Mission</h3>
+              <p>To demystify complex technology and turn it into actionable, scalable, and intuitive platforms for enterprises worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="company-section-alt values-section">
         <div className="container">
           <div className="section-header">
-            <h2>Our Core Values</h2>
+            <span className="section-overline">Our DNA</span>
+            <h2>Core Values</h2>
             <p>The principles that guide how we build, how we collaborate, and how we treat our clients.</p>
           </div>
           
           <div className="values-grid">
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="value-card modern-card">
+              <div className="value-icon gradient-icon-1">
+                <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h4>Radical Agility</h4>
-              <p>We move fast, iterate quickly, and adapt to changing requirements without missing a beat.</p>
+              <p>We move fast, iterate quickly, and adapt to changing requirements without missing a single beat.</p>
             </div>
             
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="value-card modern-card">
+              <div className="value-icon gradient-icon-2">
+                <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -61,14 +101,28 @@ export function About() {
               <p>We believe in doing things right the first time. Clean code, robust architecture, and flawless design.</p>
             </div>
 
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="value-card modern-card">
+              <div className="value-icon gradient-icon-3">
+                <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
               <h4>Human-Centered</h4>
-              <p>Software is built for people. We prioritize accessibility, empathy, and intuitive user experiences.</p>
+              <p>Software is built for people. We prioritize accessibility, empathy, and highly intuitive user experiences.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <h2>Ready to build the future?</h2>
+            <p>We are always looking for visionary engineers, designers, and thinkers to join our global team.</p>
+            <div className="cta-actions">
+              <Link to="/company/careers" className="btn-primary">View Open Roles</Link>
+              <Link to="/company/leadership" className="btn-secondary">Meet Our Leadership</Link>
             </div>
           </div>
         </div>
