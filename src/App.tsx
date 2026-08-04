@@ -27,6 +27,20 @@ import { Finance } from './pages/solutions/Finance';
 import { PredictiveMaintenance } from './pages/solutions/PredictiveMaintenance';
 import { CustomerIntelligence } from './pages/solutions/CustomerIntelligence';
 import { Compliance } from './pages/solutions/Compliance';
+import { CloudServices } from './pages/solutions/CloudServices';
+import { DevSecOps } from './pages/solutions/DevSecOps';
+import { CloudNative } from './pages/solutions/CloudNative';
+import { PlatformEngineering } from './pages/solutions/PlatformEngineering';
+import { AgileDevOps } from './pages/solutions/AgileDevOps';
+import { UiUxDesign } from './pages/solutions/UiUxDesign';
+import { MobileAppDev } from './pages/solutions/MobileAppDev';
+import { NetworkServices } from './pages/solutions/NetworkServices';
+import { CyberSecurity } from './pages/solutions/CyberSecurity';
+import { DigitalEnterpriseApps } from './pages/solutions/DigitalEnterpriseApps';
+import { DataAndAI } from './pages/solutions/DataAndAI';
+import { DigitalStrategy } from './pages/solutions/DigitalStrategy';
+import { EngineeringRD } from './pages/solutions/EngineeringRD';
+import { EnterprisePlatforms } from './pages/solutions/EnterprisePlatforms';
 
 // Resources
 import { Documentation } from './pages/resources/Documentation';
@@ -85,6 +99,20 @@ function App() {
           <Route path="/solutions/predictive-maintenance" element={<PredictiveMaintenance />} />
           <Route path="/solutions/customer-intelligence" element={<CustomerIntelligence />} />
           <Route path="/solutions/compliance" element={<Compliance />} />
+          <Route path="/solutions/cloud-services" element={<CloudServices />} />
+          <Route path="/solutions/devsecops" element={<DevSecOps />} />
+          <Route path="/solutions/cloud-native" element={<CloudNative />} />
+          <Route path="/solutions/platform-engineering" element={<PlatformEngineering />} />
+          <Route path="/solutions/agile-devops" element={<AgileDevOps />} />
+          <Route path="/solutions/ui-ux-design" element={<UiUxDesign />} />
+          <Route path="/solutions/mobile-app-dev" element={<MobileAppDev />} />
+          <Route path="/solutions/network-services" element={<NetworkServices />} />
+          <Route path="/solutions/cyber-security" element={<CyberSecurity />} />
+          <Route path="/solutions/digital-enterprise-apps" element={<DigitalEnterpriseApps />} />
+          <Route path="/solutions/data-and-ai" element={<DataAndAI />} />
+          <Route path="/solutions/digital-strategy" element={<DigitalStrategy />} />
+          <Route path="/solutions/engineering-rd" element={<EngineeringRD />} />
+          <Route path="/solutions/enterprise-platforms" element={<EnterprisePlatforms />} />
 
           {/* Resources */}
           <Route path="/resources/documentation" element={<Documentation />} />

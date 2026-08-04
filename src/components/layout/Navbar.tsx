@@ -160,6 +160,58 @@ export function Navbar() {
                     </Link>
                   </div>
                 </div>
+                <div>
+                  <div className="text-xs font-bold text-secondary uppercase tracking-widest mb-6">By Service</div>
+                  <div className="flex flex-col gap-6">
+                    <Link to="/solutions/cloud-services" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Cloud Services</div>
+                    </Link>
+                    <Link to="/solutions/devsecops" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">DevSecOps</div>
+                    </Link>
+                    <Link to="/solutions/cloud-native" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Cloud Native Development Services</div>
+                    </Link>
+                    <Link to="/solutions/platform-engineering" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Design Led Platform Engineering</div>
+                    </Link>
+                    <Link to="/solutions/agile-devops" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Agile Development & DevOps</div>
+                    </Link>
+                    <Link to="/solutions/ui-ux-design" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">UI/UX Design</div>
+                    </Link>
+                    <Link to="/solutions/mobile-app-dev" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Mobile App Development</div>
+                    </Link>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-secondary uppercase tracking-widest mb-6">More Services</div>
+                  <div className="flex flex-col gap-6">
+                    <Link to="/solutions/network-services" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Network Services</div>
+                    </Link>
+                    <Link to="/solutions/cyber-security" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Cyber Security</div>
+                    </Link>
+                    <Link to="/solutions/digital-enterprise-apps" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Digital Enterprise Applications</div>
+                    </Link>
+                    <Link to="/solutions/data-and-ai" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Data and AI</div>
+                    </Link>
+                    <Link to="/solutions/digital-strategy" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Digital Strategy</div>
+                    </Link>
+                    <Link to="/solutions/engineering-rd" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Engineering Research & Development</div>
+                    </Link>
+                    <Link to="/solutions/enterprise-platforms" className="solution-item">
+                      <div className="font-bold text-primary text-base mb-0.5">Enterprise Platforms</div>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </li>

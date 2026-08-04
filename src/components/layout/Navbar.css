@@ -84,7 +84,7 @@
 
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
@@ -260,9 +260,7 @@
 
 /* Navbar Theme Overrides */
 /* Home (Dark Theme) */
-.navbar.theme-dark {
-  /* Inherit the dynamic --active-product-color from the base .navbar class */
-}
+
 
 /* Products (Product Theme) */
 .navbar.theme-product {

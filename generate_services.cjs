@@ -1,0 +1,141 @@
+const fs = require('fs');
+const path = require('path');
+
+const services = [
+  {
+    name: 'CloudServices',
+    title: 'Cloud Services',
+    subtitle: 'Scalable, secure, and resilient cloud infrastructure',
+    desc: 'Migrate, manage, and optimize your business on the cloud. The Patterns Company Cloud Services provide end-to-end cloud solutions tailored to your unique enterprise needs, ensuring high availability and cost efficiency.',
+    features: ['Cloud Migration', 'Infrastructure as Code', 'Cloud Security']
+  },
+  {
+    name: 'DevSecOps',
+    title: 'DevSecOps',
+    subtitle: 'Security integrated at the speed of DevOps',
+    desc: 'Bake security into every phase of your software development lifecycle. Our DevSecOps services automate security checks without slowing down your deployment pipelines.',
+    features: ['Continuous Security', 'Vulnerability Scanning', 'Automated Compliance']
+  },
+  {
+    name: 'CloudNative',
+    title: 'Cloud Native Development',
+    subtitle: 'Build modern applications from the ground up',
+    desc: 'Leverage microservices, containers, and serverless architectures to build scalable, resilient, and highly available applications native to the cloud environment.',
+    features: ['Microservices Architecture', 'Container Orchestration', 'Serverless Compute']
+  },
+  {
+    name: 'PlatformEngineering',
+    title: 'Platform Engineering',
+    subtitle: 'Design-led internal developer platforms',
+    desc: 'Empower your development teams with robust, self-service internal developer platforms. We design platform engineering solutions that reduce cognitive load and speed up time-to-market.',
+    features: ['Self-Service Portals', 'Automated Provisioning', 'Developer Experience (DevEx)']
+  },
+  {
+    name: 'AgileDevOps',
+    title: 'Agile Development & DevOps',
+    subtitle: 'Accelerate your software delivery',
+    desc: 'Unite your development and operations teams with Agile methodologies and DevOps practices. We help you build a culture of continuous integration and continuous delivery (CI/CD).',
+    features: ['CI/CD Pipelines', 'Agile Coaching', 'Release Automation']
+  },
+  {
+    name: 'UiUxDesign',
+    title: 'UI/UX Design',
+    subtitle: 'Crafting digital experiences that captivate',
+    desc: 'Transform your product with human-centered design. Our UI/UX experts create intuitive, accessible, and stunning interfaces that drive user engagement and satisfaction.',
+    features: ['User Research', 'Wireframing & Prototyping', 'Design Systems']
+  },
+  {
+    name: 'MobileAppDev',
+    title: 'Mobile App Development',
+    subtitle: 'Native and cross-platform mobile experiences',
+    desc: 'Build high-performance, engaging mobile applications for iOS and Android. From consumer apps to enterprise mobility solutions, we deliver excellence in your pocket.',
+    features: ['iOS & Android Native', 'React Native & Flutter', 'Mobile Strategy']
+  }
+];
+
+const template = (service) => `import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Solutions.css';
+
+export function ${service.name}() {
+  useEffect(() => {
+    document.documentElement.style.setProperty('--active-product-color', 'var(--primary)');
+  }, []);
+
+  return (
+    <div className="solution-page">
+      {/* HERO SECTION */}
+      <section className="solution-hero">
+        <div className="container">
+          <div className="badge">By Service</div>
+          <h1>${service.title}</h1>
+          <p>${service.subtitle}</p>
+          <p className="text-secondary" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+            ${service.desc}
+          </p>
+          <Link to="/book-demo" className="btn-solid-white" style={{ background: 'var(--primary)', color: 'white' }}>Book a Consultation</Link>
+        </div>
+      </section>
+
+      {/* OVERVIEW SECTION */}
+      <section className="solution-overview">
+        <div className="container">
+          <h2>Elevate Your Technology Stack</h2>
+          <p>Modern enterprises require robust, scalable, and secure technological foundations. Our ${service.title} offering is designed to meet these exact needs.</p>
+          <p>We partner with you to deliver cutting-edge solutions that drive innovation, reduce operational overhead, and ensure your business is ready for the future.</p>
+        </div>
+      </section>
+
+      {/* FEATURES SECTION */}
+      <section className="solution-features">
+        <div className="container">
+          <h2>Key Capabilities</h2>
+          <div className="features-grid">
+            
+            <div className="solution-card">
+              <div className="solution-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+              </div>
+              <h3>${service.features[0]}</h3>
+              <p>State-of-the-art implementations utilizing the best industry practices and standards.</p>
+            </div>
+
+            <div className="solution-card">
+              <div className="solution-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+              </div>
+              <h3>${service.features[1]}</h3>
+              <p>Seamlessly integrated workflows that enhance productivity and reduce manual overhead.</p>
+            </div>
+
+            <div className="solution-card">
+              <div className="solution-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+              </div>
+              <h3>${service.features[2]}</h3>
+              <p>Future-proof architecture designed to scale seamlessly alongside your business growth.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA SECTION */}
+      <section className="solution-cta">
+        <div className="container">
+          <h2>Ready to Transform with ${service.title}?</h2>
+          <p>Get in touch with our experts to discuss how we can tailor our solutions to your specific needs.</p>
+          <Link to="/company/contact" className="btn-solid-white text-primary mt-6">Contact Us Today</Link>
+        </div>
+      </section>
+    </div>
+  );
+}
+`;
+
+const dir = path.join(__dirname, 'src', 'pages', 'solutions');
+services.forEach(svc => {
+  const file = path.join(dir, `${svc.name}.tsx`);
+  fs.writeFileSync(file, template(svc));
+  console.log(`Created ${file}`);
+});
