@@ -363,7 +363,31 @@
     left: 1rem;
   }
   .docs-categories-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .docs-category-card {
+    padding: 1.25rem 1rem;
+  }
+  .docs-category-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .docs-category-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .docs-category-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .docs-category-card p {
+    font-size: 0.85rem;
+  }
+  .docs-category-link {
+    font-size: 0.85rem;
+    margin-top: 1rem;
   }
   .changelog-item {
     flex-direction: column;
