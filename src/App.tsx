@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ScrollToTop } from './components/layout/ScrollToTop';
+import { FloatingScrollButton } from './components/layout/FloatingScrollButton';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
@@ -144,6 +145,7 @@ function App() {
 
         </Routes>
         <Footer />
+        <FloatingScrollButton />
       </div>
     </BrowserRouter>
   );
