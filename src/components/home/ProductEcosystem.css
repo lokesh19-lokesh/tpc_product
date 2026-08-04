@@ -32,14 +32,14 @@
 }
 
 /* Bento Grid */
-.bento-grid {
+.ecosystem-bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(280px, auto);
   gap: 1rem;
 }
 
-.bento-item {
+.ecosystem-bento-item {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -54,12 +54,12 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.bento-item:hover {
+.ecosystem-bento-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
 }
 
-.bento-overlay {
+.ecosystem-bento-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -70,7 +70,7 @@
   pointer-events: none;
 }
 
-.bento-content {
+.ecosystem-bento-content {
   position: relative;
   z-index: 2;
   color: white;
@@ -78,7 +78,7 @@
   flex-direction: column;
 }
 
-.bento-category {
+.ecosystem-bento-category {
   font-size: 0.65rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
@@ -86,14 +86,14 @@
   margin-bottom: 0.5rem;
 }
 
-.bento-title {
+.ecosystem-bento-title {
   font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin: 0 0 0.5rem 0;
 }
 
-.bento-description {
+.ecosystem-bento-description {
   font-size: 0.875rem;
   color: #e5e7eb;
   font-weight: 400;
@@ -102,11 +102,11 @@
   max-width: 90%;
 }
 
-.bento-explore span {
+.ecosystem-bento-explore span {
   transition: transform 0.2s ease;
 }
 
-.bento-item:hover .explore-btn span {
+.ecosystem-bento-item:hover .explore-btn span {
   transform: translateX(4px);
 }
 
@@ -132,30 +132,27 @@
 }
 
 /* Grid Spans */
-.bento-item.manufacturing {
-  grid-column: span 7;
-  height: 550px;
+.ecosystem-bento-item.manufacturing {
+  grid-column: span 8;
 }
 
-.bento-item.healthcare {
-  grid-column: span 5;
-  height: 280px;
-  align-self: start;
-}
-
-.bento-item.hospitality {
+.ecosystem-bento-item.healthcare {
   grid-column: span 4;
 }
 
-.bento-item.education {
+.ecosystem-bento-item.hospitality {
   grid-column: span 4;
 }
 
-.bento-item.construction {
+.ecosystem-bento-item.education {
   grid-column: span 4;
 }
 
-.bento-item.enterprise {
+.ecosystem-bento-item.construction {
+  grid-column: span 4;
+}
+
+.ecosystem-bento-item.enterprise {
   grid-column: span 12;
   margin-top: 2rem;
 }
@@ -166,29 +163,24 @@
     font-size: 3.5rem;
   }
 
-  .bento-grid {
+  .ecosystem-bento-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 240px;
   }
 
-  .bento-item.manufacturing,
-  .bento-item.enterprise {
+  .ecosystem-bento-item.manufacturing,
+  .ecosystem-bento-item.enterprise {
     grid-column: span 2;
   }
 
-  .bento-item.manufacturing {
-    height: auto;
+  .ecosystem-bento-item.healthcare {
+    grid-column: span 2;
   }
 
-  .bento-item.healthcare {
-    height: auto;
-    align-self: stretch;
-  }
-
-  .bento-item.healthcare,
-  .bento-item.education,
-  .bento-item.hospitality,
-  .bento-item.construction {
+  .ecosystem-bento-item.healthcare,
+  .ecosystem-bento-item.education,
+  .ecosystem-bento-item.hospitality,
+  .ecosystem-bento-item.construction {
     grid-column: span 1;
   }
 }
@@ -202,17 +194,17 @@
     font-size: 2.5rem;
   }
 
-  .bento-grid {
+  .ecosystem-bento-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: 220px;
   }
 
-  .bento-item.manufacturing,
-  .bento-item.healthcare,
-  .bento-item.education,
-  .bento-item.hospitality,
-  .bento-item.construction,
-  .bento-item.enterprise {
+  .ecosystem-bento-item.manufacturing,
+  .ecosystem-bento-item.healthcare,
+  .ecosystem-bento-item.education,
+  .ecosystem-bento-item.hospitality,
+  .ecosystem-bento-item.construction,
+  .ecosystem-bento-item.enterprise {
     grid-column: span 1;
   }
 }

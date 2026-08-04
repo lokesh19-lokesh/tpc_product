@@ -9,7 +9,7 @@ export function ProductEcosystem() {
       category: 'MANUFACTURING INTELLIGENCE',
       description: 'Machine-level telemetry, predictive maintenance and production planning in a single operational surface.',
       className: 'manufacturing',
-      image: '/images/manufacturing_bg_1785483405758.png',
+      image: '/images/pattersos.jpeg',
       colorClass: 'explore-green',
       path: '/products/patterns-os'
     },
@@ -77,19 +77,19 @@ export function ProductEcosystem() {
           </h2>
         </div>
 
-        <div className="bento-grid">
+        <div className="ecosystem-bento-grid">
           {products.map(product => (
             <div 
               key={product.id}
-              className={`bento-item ${product.className}`}
+              className={`ecosystem-bento-item ${product.className}`}
               style={{ backgroundImage: `url(${product.image})` }}
             >
-              <div className="bento-overlay"></div>
-              <div className="bento-content">
-                <p className="bento-category">{product.category}</p>
-                <h3 className="bento-title">{product.title}</h3>
-                <p className="bento-description">{product.description}</p>
-                <div className="bento-explore mt-4">
+              <div className="ecosystem-bento-overlay"></div>
+              <div className="ecosystem-bento-content">
+                <p className="ecosystem-bento-category">{product.category}</p>
+                <h3 className="ecosystem-bento-title">{product.title}</h3>
+                <p className="ecosystem-bento-description">{product.description}</p>
+                <div className="ecosystem-bento-explore mt-4">
                   <Link to={product.path} className={`explore-btn font-semibold text-sm ${product.colorClass} flex items-center gap-1`}>
                     Explore <span>→</span>
                   </Link>
