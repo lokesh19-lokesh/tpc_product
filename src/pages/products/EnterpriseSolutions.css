@@ -1,0 +1,266 @@
+.enterprise-solutions-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.enterprise-solutions-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #111827 0%, #000000 100%);
+  color: white;
+}
+
+.enterprise-solutions-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(249, 115, 21, 0.15) 0%, rgba(249, 115, 21, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.enterprise-solutions-hero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.enterprise-solutions-hero .product-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(249, 115, 21, 0.1);
+  border: 1px solid rgba(249, 115, 21, 0.2);
+  color: var(--accent-orange);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.enterprise-solutions-hero .product-badge .dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-orange);
+}
+
+.enterprise-solutions-hero h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.enterprise-solutions-hero h1 span {
+  color: var(--accent-orange);
+}
+
+.enterprise-solutions-hero p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.btn-visit-enterprise {
+  background-color: var(--accent-orange);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-visit-enterprise:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+  color: white;
+  box-shadow: 0 10px 20px rgba(249, 115, 21, 0.2);
+}
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.float-icon {
+  position: absolute;
+  color: rgba(249, 115, 21, 0.15); /* matching the accent-orange with low opacity */
+  animation: float-around 25s infinite ease-in-out;
+}
+
+.float-icon.icon-1 { top: 15%; left: 10%; width: 120px; height: 120px; animation-duration: 28s; animation-delay: 0s; }
+.float-icon.icon-2 { top: 60%; left: 5%; width: 90px; height: 90px; animation-duration: 22s; animation-delay: -5s; }
+.float-icon.icon-3 { top: 10%; right: 12%; width: 150px; height: 150px; animation-duration: 32s; animation-delay: -12s; }
+.float-icon.icon-4 { top: 65%; right: 8%; width: 100px; height: 100px; animation-duration: 25s; animation-delay: -8s; }
+.float-icon.icon-5 { top: 40%; right: 25%; width: 80px; height: 80px; animation-duration: 20s; animation-delay: -15s; }
+.float-icon.icon-6 { top: 35%; left: 25%; width: 110px; height: 110px; animation-duration: 29s; animation-delay: -3s; }
+
+@keyframes float-around {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0.6; }
+  33% { transform: translate(40px, -60px) rotate(15deg); opacity: 1; }
+  66% { transform: translate(-30px, 40px) rotate(-10deg); opacity: 0.8; }
+  100% { transform: translate(0, 0) rotate(0deg); opacity: 0.6; }
+}
+
+/* Features Section */
+.enterprise-solutions-features {
+  padding: 8rem 0;
+  background-color: #f9fafb;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.feature-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background: rgba(249, 115, 21, 0.1);
+  color: var(--accent-orange);
+}
+
+.feature-icon-wrapper svg {
+  width: 32px;
+  height: 32px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.feature-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+  .enterprise-solutions-hero {
+    padding: 6rem 0;
+  }
+  
+  .enterprise-solutions-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .enterprise-solutions-features {
+    padding: 4rem 0;
+  }
+
+  .feature-card {
+    padding: 1rem 0.5rem;
+    border-radius: 16px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .feature-card p {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .feature-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .feature-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+}
