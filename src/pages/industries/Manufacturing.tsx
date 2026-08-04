@@ -106,7 +106,7 @@ export function Manufacturing() {
 
           <div className="bento-grid">
             {/* Top Left: Tall Factory Image */}
-            <div className="bento-item bento-img-1"></div>
+            <div className="bento-item bento-img-1" style={{ backgroundImage: "url('/images/bento/factory_floor.png')" }}></div>
 
             {/* Top Mid: Dark Box */}
             <div className="bento-item bento-dark">
@@ -129,7 +129,7 @@ export function Manufacturing() {
             </div>
 
             {/* Bottom Left: Dashboard Image with Text */}
-            <div className="bento-item bento-img-2">
+            <div className="bento-item bento-img-2" style={{ backgroundImage: "url('/images/bento/factory_dashboard.png')" }}>
               <div className="bento-img-2-content">
                 <p>Whether it's managing supply chains or preventing critical breakdowns, we turn data into manufacturing breakthroughs.</p>
                 <div className="date">a day ago</div>
@@ -140,7 +140,7 @@ export function Manufacturing() {
             <div className="bento-item bento-wide">
               <div className="badge-new">NEW</div>
               <div className="bento-wide-overlay"></div>
-              <div className="bento-wide-bg"></div>
+              <div className="bento-wide-bg" style={{ backgroundImage: "url('/images/bento/factory_wide.png')" }}></div>
               <div className="bento-wide-content">
                 <h3>Excellence at work. As above, so below. Celebrating our team's dedication to building a better future.</h3>
               </div>
