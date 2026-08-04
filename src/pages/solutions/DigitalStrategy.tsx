@@ -1,76 +1,229 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Solutions.css';
+import './ServiceTemplate.css';
 
 export function DigitalStrategy() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.documentElement.style.setProperty('--active-product-color', 'var(--primary)');
   }, []);
 
   return (
     <div className="solution-page">
-      {/* HERO SECTION */}
+      {/* 1. HERO SECTION */}
       <section className="solution-hero">
-        <div className="container">
-          <div className="badge">By Service</div>
-          <h1>Digital Strategy</h1>
-          <p>Blueprint your digital transformation journey</p>
-          <p className="text-secondary" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+        <div className="container relative z-10">
+          <div className="badge mb-6 inline-block bg-primary/20 text-primary px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider">
+            Premium Service
+          </div>
+          <h1 className="text-white drop-shadow-lg">Digital Strategy</h1>
+          <p className="subtitle text-primary drop-shadow-md">Blueprint your digital transformation journey</p>
+          <p className="text-gray-200 text-xl leading-relaxed mt-4 drop-shadow-sm" style={{ maxWidth: '750px', margin: '0 auto 2.5rem' }}>
             Navigate the complexities of the digital age with expert consulting. We help you align your technology investments with your long-term business goals.
           </p>
-          <Link to="/book-demo" className="btn-solid-white" style={{ background: 'var(--primary)', color: 'white' }}>Book a Consultation</Link>
-        </div>
-      </section>
-
-      {/* OVERVIEW SECTION */}
-      <section className="solution-overview">
-        <div className="container">
-          <h2>Elevate Your Technology Stack</h2>
-          <p>Modern enterprises require robust, scalable, and secure technological foundations. Our Digital Strategy offering is designed to meet these exact needs.</p>
-          <p>We partner with you to deliver cutting-edge solutions that drive innovation, reduce operational overhead, and ensure your business is ready for the future.</p>
-        </div>
-      </section>
-
-      {/* FEATURES SECTION */}
-      <section className="solution-features">
-        <div className="container">
-          <h2>Key Capabilities</h2>
-          <div className="features-grid">
-            
-            <div className="solution-card">
-              <div className="solution-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-              </div>
-              <h3>Technology Roadmapping</h3>
-              <p>State-of-the-art implementations utilizing the best industry practices and standards.</p>
-            </div>
-
-            <div className="solution-card">
-              <div className="solution-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
-              </div>
-              <h3>Digital Transformation</h3>
-              <p>Seamlessly integrated workflows that enhance productivity and reduce manual overhead.</p>
-            </div>
-
-            <div className="solution-card">
-              <div className="solution-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
-              </div>
-              <h3>Change Management</h3>
-              <p>Future-proof architecture designed to scale seamlessly alongside your business growth.</p>
-            </div>
-
+          <div className="flex justify-center gap-4 mt-8">
+            <Link to="/book-demo" className="btn-solid-white" style={{ background: 'var(--primary)', color: 'white', padding: '1.2rem 2.5rem', borderRadius: '0.5rem', fontWeight: 'bold', fontSize: '1.1rem' }}>
+              Book a Consultation
+            </Link>
+            <Link to="/company/contact" className="btn-outline" style={{ border: '2px solid rgba(255,255,255,0.3)', color: 'white', padding: '1.2rem 2.5rem', borderRadius: '0.5rem', fontWeight: 'bold', fontSize: '1.1rem' }}>
+              Contact Sales
+            </Link>
           </div>
         </div>
       </section>
-      
-      {/* CTA SECTION */}
-      <section className="solution-cta">
+
+      {/* 2. CHALLENGE VS SOLUTION SECTION */}
+      <section className="solution-challenge">
         <div className="container">
-          <h2>Ready to Transform with Digital Strategy?</h2>
-          <p>Get in touch with our experts to discuss how we can tailor our solutions to your specific needs.</p>
-          <Link to="/company/contact" className="btn-solid-white text-primary mt-6">Contact Us Today</Link>
+          <div className="challenge-grid">
+            <div className="challenge-box">
+              <h3>
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                The Industry Challenge
+              </h3>
+              <p className="text-secondary leading-relaxed text-lg">
+                Many companies invest heavily in new technologies without a cohesive plan, resulting in "digital islands" that fail to integrate or deliver measurable return on investment.
+              </p>
+            </div>
+            <div className="solution-box">
+              <h3>
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Our Solution
+              </h3>
+              <p className="text-secondary leading-relaxed text-lg">
+                We act as your strategic partner. We analyze your current market position, identify digital gaps, and build a comprehensive roadmap that ensures technology drives real business value rather than just overhead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. CORE CAPABILITIES (6 Grid) */}
+      <section className="solution-features-rich">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Core Capabilities</h2>
+            <p className="text-secondary max-w-2xl mx-auto text-lg">Comprehensive, end-to-end expertise delivering exceptional results.</p>
+          </div>
+          <div className="rich-features-grid">
+            
+            <div className="rich-feature-card">
+              <div className="feature-icon-wrapper">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Technology Roadmapping</h3>
+              <p className="text-secondary leading-relaxed">Multi-year strategic plans prioritizing technology investments based on ROI.</p>
+            </div>
+            
+            <div className="rich-feature-card">
+              <div className="feature-icon-wrapper">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Digital Maturity Assessment</h3>
+              <p className="text-secondary leading-relaxed">Benchmarking your current capabilities against industry leaders and competitors.</p>
+            </div>
+            
+            <div className="rich-feature-card">
+              <div className="feature-icon-wrapper">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Change Management</h3>
+              <p className="text-secondary leading-relaxed">Strategies to ensure high employee adoption rates for new digital tools and processes.</p>
+            </div>
+            
+            <div className="rich-feature-card">
+              <div className="feature-icon-wrapper">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Operating Model Design</h3>
+              <p className="text-secondary leading-relaxed">Restructuring teams and governance models to support agile, digital-first operations.</p>
+            </div>
+            
+            <div className="rich-feature-card">
+              <div className="feature-icon-wrapper">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Vendor Selection</h3>
+              <p className="text-secondary leading-relaxed">Unbiased analysis and procurement strategy for enterprise software and hardware.</p>
+            </div>
+            
+            <div className="rich-feature-card">
+              <div className="feature-icon-wrapper">
+                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3>Innovation Workshops</h3>
+              <p className="text-secondary leading-relaxed">Facilitated design thinking sessions to uncover new digital business models.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* 4. TECHNOLOGIES WE USE */}
+      <section className="solution-tech-stack">
+        <div className="container text-center">
+          <h2 className="text-3xl font-bold mb-4">Technologies & Frameworks</h2>
+          <p className="text-secondary max-w-2xl mx-auto text-lg">We build with the best enterprise-grade tools available.</p>
+          <div className="tech-grid">
+            <div className="tech-badge">Miro</div><div className="tech-badge">Notion</div><div className="tech-badge">Lucidchart</div><div className="tech-badge">Gartner Magic Quadrants</div><div className="tech-badge">SWOT Analysis</div><div className="tech-badge">Agile Frameworks</div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. OUR PROCESS */}
+      <section className="solution-process">
+        <div className="container">
+          <h2>Our Proven Methodology</h2>
+          <div className="process-grid">
+            <div className="process-step">
+              <div className="step-number">1</div>
+              <h4 className="step-title">Discovery</h4>
+              <p className="step-desc">We deeply analyze your current infrastructure, workflows, and business objectives.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">2</div>
+              <h4 className="step-title">Strategy</h4>
+              <p className="step-desc">Our architects design a tailored, scalable blueprint aligned with industry best practices.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">3</div>
+              <h4 className="step-title">Implementation</h4>
+              <p className="step-desc">Agile execution with continuous feedback loops ensuring transparency and speed.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">4</div>
+              <h4 className="step-title">Optimization</h4>
+              <p className="step-desc">Post-deployment monitoring, performance tuning, and continuous scaling support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. BUSINESS OUTCOMES */}
+      <section className="solution-outcomes">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4">Tangible Business Outcomes</h2>
+            <p className="text-secondary max-w-2xl mx-auto text-lg">We don't just deliver technology; we deliver measurable impact.</p>
+          </div>
+          <div className="outcomes-grid">
+            <div className="outcome-card">
+              <div className="outcome-stat">30%+</div>
+              <h4 className="font-bold text-lg mb-2">Cost Reduction</h4>
+              <p className="text-secondary text-sm">Lower operational and infrastructure costs through intelligent automation and optimization.</p>
+            </div>
+            <div className="outcome-card">
+              <div className="outcome-stat">2x</div>
+              <h4 className="font-bold text-lg mb-2">Faster Time-to-Market</h4>
+              <p className="text-secondary text-sm">Accelerate your product cycles with agile pipelines and streamlined development.</p>
+            </div>
+            <div className="outcome-card">
+              <div className="outcome-stat">99.99%</div>
+              <h4 className="font-bold text-lg mb-2">Reliability</h4>
+              <p className="text-secondary text-sm">Enterprise-grade uptime ensuring your services are always available to your customers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. FAQ SECTION */}
+      <section className="solution-faq">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
+            <p className="text-secondary">Common questions about our Digital Strategy engagements.</p>
+          </div>
+          <div className="faq-container">
+            
+            <div className="faq-item">
+              <h4>How long does a strategy engagement take?</h4>
+              <p>A typical initial digital maturity assessment and roadmapping engagement takes 4 to 8 weeks, delivering a clear 3-year execution plan.</p>
+            </div>
+            
+            <div className="faq-item">
+              <h4>Do you implement the strategy as well?</h4>
+              <p>Yes. We are an end-to-end consultancy. The same team that designs the blueprint can bring in our engineering pods to build the actual software.</p>
+            </div>
+            
+            <div className="faq-item">
+              <h4>How do you measure the success of digital transformation?</h4>
+              <p>We establish clear KPIs upfront—ranging from customer acquisition cost and employee retention to raw infrastructure cost savings.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* 8. CTA SECTION */}
+      <section className="bg-gray-50 py-24 text-center border-t border-gray-200">
+        <div className="container">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform with Digital Strategy?</h2>
+          <p className="text-secondary max-w-2xl mx-auto mb-10 text-xl">
+            Get in touch with our expert architects to discuss how we can tailor our solutions to your specific enterprise needs.
+          </p>
+          <Link to="/book-demo" className="inline-block bg-primary text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-green-700 transition-colors text-lg">
+            Start Your Transformation
+          </Link>
         </div>
       </section>
     </div>
