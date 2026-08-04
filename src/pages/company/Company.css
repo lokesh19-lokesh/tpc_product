@@ -706,6 +706,174 @@
   line-height: 1.6;
 }
 
+/* --- Investors Page Styles --- */
+.investor-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.investor-stat-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.investor-stat-card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+}
+
+.investor-stat-card h3 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.investor-stat-card p {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.report-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.report-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #f1f5f9;
+  color: #3b82f6;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s;
+}
+
+.report-card:hover .report-icon {
+  background: #3b82f6;
+  color: white;
+  transform: scale(1.1);
+}
+
+.report-info h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.report-info p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.btn-download-sm {
+  background: transparent;
+  border: 2px solid #e2e8f0;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.report-card:hover .btn-download-sm {
+  border-color: #3b82f6;
+  background: #3b82f6;
+  color: white;
+}
+
+.backers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.backer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #94a3b8;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.backer-logo:hover {
+  color: #0f172a;
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.ir-contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  background: #0f172a;
+  color: white;
+  border-radius: 1.5rem;
+}
+
+.ir-content h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ir-content p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+.ir-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.ir-email {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .hero-title { font-size: 3.5rem; }
@@ -719,6 +887,11 @@
   .media-kit-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .offices-grid { grid-template-columns: repeat(2, 1fr); }
+  .investor-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .reports-grid { grid-template-columns: repeat(2, 1fr); }
+  .backers-grid { grid-template-columns: repeat(2, 1fr); }
+  .ir-contact-card { flex-direction: column; text-align: center; gap: 2.5rem; padding: 3rem; }
+  .ir-action { align-items: center; }
 }
 
 @media (max-width: 768px) {
@@ -740,4 +913,11 @@
   .btn-download { padding: 0.5rem 1rem; font-size: 0.85rem; }
   .contact-form-container { padding: 2rem; }
   .offices-grid { grid-template-columns: 1fr; }
+  .investor-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .investor-stat-card { padding: 1.5rem 1rem; }
+  .investor-stat-card h3 { font-size: 2rem; }
+  .investor-stat-card p { font-size: 0.75rem; }
+  .reports-grid { grid-template-columns: 1fr; }
+  .backers-grid { grid-template-columns: 1fr; }
+  .ir-content h2 { font-size: 1.75rem; }
 }
