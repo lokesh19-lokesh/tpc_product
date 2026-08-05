@@ -173,13 +173,14 @@
   .ecosystem-bento-item.manufacturing,
   .ecosystem-bento-item.enterprise {
     grid-column: span 2;
+    min-height: unset;
+    margin-top: 0;
   }
 
   .ecosystem-bento-item.healthcare {
-    grid-column: span 2;
+    height: auto;
   }
 
-  .ecosystem-bento-item.healthcare,
   .ecosystem-bento-item.education,
   .ecosystem-bento-item.hospitality,
   .ecosystem-bento-item.construction {
@@ -208,5 +209,8 @@
   .ecosystem-bento-item.construction,
   .ecosystem-bento-item.enterprise {
     grid-column: span 1;
+    min-height: unset;
+    height: auto;
+    margin-top: 0;
   }
 }
