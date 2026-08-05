@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const products = [
@@ -274,8 +275,14 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="btn-primary">Book a Demo</button>
-            <button className="btn-ghost" style={{ border: '1px solid var(--border-color)' }}>Explore Products</button>
+            <Link to="/book-demo" className="btn-primary">Book a Demo</Link>
+            <button 
+              className="btn-ghost" 
+              style={{ border: '1px solid var(--border-color)' }}
+              onClick={() => document.querySelector('.ecosystem-section')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore Products
+            </button>
           </div>
         </div>
 
