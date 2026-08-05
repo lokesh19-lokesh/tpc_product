@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
@@ -12,21 +12,33 @@ export function Navbar() {
   
   const navbarTheme = isHomePage ? 'theme-dark' : (isProductPage ? 'theme-product' : 'theme-light');
 
+  const navRef = useRef<HTMLElement>(null);
+
   // Close mobile menu on location change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setOpenDropdown(null);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const toggleDropdown = (name: string, e: React.MouseEvent) => {
-    if (window.innerWidth <= 1024) {
-      e.preventDefault();
-      setOpenDropdown(openDropdown === name ? null : name);
-    }
+    e.preventDefault();
+    setOpenDropdown(openDropdown === name ? null : name);
   };
 
   return (
-    <nav className={`navbar ${navbarTheme}`}>
+    <nav ref={navRef} className={`navbar ${navbarTheme}`}>
       <div className="container navbar-container flex items-center justify-between">
         <Link to="/" className="flex items-center z-10">
           <img src="/logo.png" alt="The Patterns Company" className="logo-img" />
