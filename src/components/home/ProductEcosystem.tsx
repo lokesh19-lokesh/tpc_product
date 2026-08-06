@@ -29,7 +29,7 @@ export function ProductEcosystem() {
       category: 'CONVERSATIONAL CRM',
       description: 'A WhatsApp-first CRM where pipeline, campaigns and support live inside the thread your customer already uses.',
       className: 'hospitality',
-      image: '/images/hospitality_bg_1785483450990.png',
+      image: '/images/3.png',
       colorClass: 'explore-green',
       path: '/products/yestick'
     },
