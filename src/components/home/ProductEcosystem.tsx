@@ -19,7 +19,7 @@ export function ProductEcosystem() {
       category: 'HEALTHCARE INTELLIGENCE',
       description: 'Patient flow, documentation and revenue cycle intelligence built for hospitals and multi-site clinics.',
       className: 'healthcare',
-      image: '/images/healthcare_bg_1785483416290.png',
+      image: '/images/MintleafeAi.png',
       colorClass: 'explore-purple',
       path: '/products/mint-leaf-ai'
     },
