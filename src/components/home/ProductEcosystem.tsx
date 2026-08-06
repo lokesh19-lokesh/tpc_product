@@ -39,7 +39,7 @@ export function ProductEcosystem() {
       category: 'EDUCATION INTELLIGENCE',
       description: 'From enquiry to enrolment to learning outcomes — the intelligence layer for modern institutions.',
       className: 'education',
-      image: '/images/education_bg_1785483427832.png',
+      image: '/images/4.png',
       colorClass: 'explore-blue',
       path: '/products/pick-my-school-ai'
     },
@@ -49,7 +49,7 @@ export function ProductEcosystem() {
       category: 'APPLIED AI RESEARCH',
       description: 'Frontier research in reasoning, forecasting and autonomous operations — shipped into products people use daily.',
       className: 'construction',
-      image: '/images/construction_bg_1785483463000.png',
+      image: '/images/5.png',
       colorClass: 'explore-white',
       path: '/products/patterns-labs'
     },
